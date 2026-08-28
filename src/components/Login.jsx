@@ -1,10 +1,12 @@
 import { useState} from "react";
 import { FcGoogle } from "react-icons/fc";
 import Dashboard from "./Dashboard.jsx";
+import Notification from "./Notification.jsx";
 
 export default function Login() {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
     const [account, setAccount] = useState({
         username: "",
         password: ""
@@ -23,7 +25,12 @@ export default function Login() {
 
         if(account.username === "kabsu" && account.password === "kabsu") {
             setIsLoggedIn(true);
-        } 
+        } else {
+            setShowNotification(true);
+            setTimeout(() => {
+                setShowNotification(false);
+            }, 3000)
+        }
 
         setAccount({
             username: "",
@@ -32,8 +39,9 @@ export default function Login() {
     }
 
     if (isLoggedIn) {
-    return <Dashboard />;
-  }
+         return <Dashboard />;
+    } 
+
 
     return (
         <>
@@ -77,12 +85,11 @@ export default function Login() {
         <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
         </form>
 
-    
-        
         <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
             <h1></h1>
         </div>
     </div>
+    {showNotification && <Notification />}
 </div>
         </>
     )
