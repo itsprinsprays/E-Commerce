@@ -1,7 +1,9 @@
 import { useState} from "react";
 import { FcGoogle } from "react-icons/fc";
+import Logo from "../assets/Logo.png";
 import Dashboard from "./Dashboard.jsx";
 import Notification from "./Notification.jsx";
+
 
 export default function Login() {
 
@@ -51,9 +53,8 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-l-2xl gap-3">
 
-        <h1 className="text-3xl text-[#1B651B]">Hello Kabsuhenyo!</h1>
-        <p className="w-[250px] text-justify leading-relaxed text-gray-500 mb-5">Lorem ipsum dolor sit amet 
-            consectetur adipisicing elit. </p>
+        <h1 className="text-3xl text-[#1B651B]">Kumusta Kabsuhenyo!</h1>
+        <p className="w-[250px] text-justify leading-relaxed text-gray-500 mb-5">Cavite State University - Imus Campus Marketplace</p>
 
         <input 
             type="text"
@@ -86,7 +87,7 @@ export default function Login() {
         </form>
 
         <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
-            <h1></h1>
+            <img src={Logo}></img>
         </div>
     </div>
     {showNotification && <Notification />}
