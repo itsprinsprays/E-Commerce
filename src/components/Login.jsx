@@ -62,6 +62,7 @@ export default function Login() {
             name="username"
             value={account.username}
             onChange={handleChanges}
+            required
             className="border border-gray-300 rounded p-4 h-10 text-sm w-[65%]"
             />
 
@@ -71,6 +72,7 @@ export default function Login() {
             name="password"
             value={account.password}
             onChange={handleChanges}
+            required
             className="border rounded border-gray-300 p-4 h-10 text-sm w-[65%]"
             />
         <p className="text-sm text-[green]">Forgot Password?</p>
@@ -86,7 +88,7 @@ export default function Login() {
         <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
         </form>
 
-        <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
+        <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl py-4">
             <img src={Logo}></img>
         </div>
     </div>
