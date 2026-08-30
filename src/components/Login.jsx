@@ -88,7 +88,7 @@ export default function Login() {
         <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
         </form>
 
-        <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl py-4">
+        <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
             <img src={Logo}></img>
         </div>
     </div>
