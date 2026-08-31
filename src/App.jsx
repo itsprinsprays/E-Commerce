@@ -8,15 +8,16 @@ import './App.css'
 import Login from "./components/Login"
 import Notification from './components/Notification'
 import Dashboard from './components/Dashboard'
+import Navigation from "./components/Navigation"
 
 function App() {
   return (
   <>
 
   <Routes>
-    <Route path='/' element={<Login />} />
+    <Route path='/' element={<Navigation />} />
     <Route path="/dashboard" element={<Dashboard />} />
-  </Routes>
+  </Routes> 
 
     </>
   )
