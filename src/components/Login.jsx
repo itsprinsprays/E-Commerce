@@ -1,19 +1,16 @@
-import { useState} from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "../assets/Logo.png";
-import Dashboard from "./Dashboard.jsx";
 import Notification from "./Notification.jsx";
 
-
 export default function Login() {
-
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const navigate = useNavigate();
     const [showNotification, setShowNotification] = useState(false);
     const [account, setAccount] = useState({
         username: "",
         password: ""
     });
-
 
     function handleChanges(e) {
         setAccount({
@@ -25,8 +22,8 @@ export default function Login() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        if(account.username === "kabsu" && account.password === "kabsu") {
-            setIsLoggedIn(true);
+        if (account.username === "kabsu" && account.password === "kabsu") {
+            navigate("/dashboard");
         } else {
             setShowNotification(true);
             setTimeout(() => {
@@ -40,60 +37,54 @@ export default function Login() {
         })
     }
 
-    if (isLoggedIn) {
-         return <Dashboard />;
-    } 
-
-
     return (
         <>
-<div className="flex justify-center items-center min-h-screen bg-[#EEF0F4] "> 
-       <div className="bg-[white] w-[50%] h-[500px] flex flex-row border-none rounded-2xl shadow-2xl">
-        
+            <div className="flex justify-center items-center min-h-screen bg-[#EEF0F4] ">
+                <div className="bg-[white] w-[50%] h-[500px] flex flex-row border-none rounded-2xl shadow-2xl">
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-l-2xl gap-3">
+                    <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-l-2xl gap-3">
 
-        <h1 className="text-3xl text-[#1B651B]">Kumusta Kabsuhenyo!</h1>
-        <p className="w-[250px] text-justify leading-relaxed text-gray-500 mb-5">Cavite State University - Imus Campus Marketplace</p>
+                        <h1 className="text-3xl text-[#1B651B]">Kumusta Kabsuhenyo!</h1>
+                        <p className="w-[250px] text-justify leading-relaxed text-gray-500 mb-5">Cavite State University - Imus Campus Marketplace</p>
 
-        <input 
-            type="text"
-            placeholder="Username"
-            name="username"
-            value={account.username}
-            onChange={handleChanges}
-            required
-            className="border border-gray-300 rounded p-4 h-10 text-sm w-[65%]"
-            />
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            name="username"
+                            value={account.username}
+                            onChange={handleChanges}
+                            required
+                            className="border border-gray-300 rounded p-4 h-10 text-sm w-[65%]"
+                        />
 
-        <input 
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={account.password}
-            onChange={handleChanges}
-            required
-            className="border rounded border-gray-300 p-4 h-10 text-sm w-[65%]"
-            />
-        <p className="text-sm text-[green]">Forgot Password?</p>
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            value={account.password}
+                            onChange={handleChanges}
+                            required
+                            className="border rounded border-gray-300 p-4 h-10 text-sm w-[65%]"
+                        />
+                        <p className="text-sm text-[green]">Forgot Password?</p>
 
-        <button type="submit" className="border w-[65%] rounded bg-[green] h-10 text-sm text-[white] transition-colors duration-300 hover:bg-[#02E49B] hover:text-black">
-            Log In</button>
+                        <button type="submit" className="border w-[65%] rounded bg-[green] h-10 text-sm text-[white] transition-colors duration-300 hover:bg-[#02E49B] hover:text-black">
+                            Log In</button>
 
-        <button className="flex items-center gap-2 border rounded px-3 py-2 pl-9 w-[65%]">
-        <FcGoogle className="w-5 h-5" />
-        <span>Sign in with Google</span>
-        </button>
+                        <button className="flex items-center gap-2 border rounded px-3 py-2 pl-9 w-[65%]">
+                            <FcGoogle className="w-5 h-5" />
+                            <span>Sign in with Google</span>
+                        </button>
 
-        <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
-        </form>
+                        <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
+                    </form>
 
-        <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
-            <img src={Logo}></img>
-        </div>
-    </div>
-    {showNotification && <Notification />}
-</div>
+                    <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
+                        <img src={Logo}></img>
+                    </div>
+                </div>
+                {showNotification && <Notification />}
+            </div>
         </>
     )
 }
