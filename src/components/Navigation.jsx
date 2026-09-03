@@ -12,11 +12,13 @@ export default function Navigation() {
             to="/Orders">
                 <FaBox /> Orders</Link>
 
-            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded"
-            to="/Cart">Cart</Link>
+            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2"
+            to="/Cart">
+                <FaShoppingCart /> Cart</Link>
 
-            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded"
-             to="/Cart">Profile</Link>
+            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2"
+             to="/Cart">
+                <FaUser /> Profile</Link>
         </nav>
         </div>
         </>
