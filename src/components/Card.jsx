@@ -3,7 +3,7 @@ import { CiUser } from "react-icons/ci";
 export default function Card({ image, title, price, name, gmail }) {
   return (
     <div 
-      className={`w-[25%] h-[300px] bg-[white] items-center justify-center flex flex-col rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 gap-2`}>
+      className={`w-full h-[300px] bg-[white] items-center justify-center flex flex-col rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 gap-2`}>
           {image && <img src={image} className="w-full h-1/2 object-cover border-2 border-gray-300 rounded-t-lg" />}
         <div className="h-1/2 w-full px-2">
           <p className="text-lg font-semibold">{title}</p>

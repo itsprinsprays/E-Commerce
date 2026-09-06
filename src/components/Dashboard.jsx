@@ -9,17 +9,14 @@ const products = [
   { image: polo, title: "Polo Shirt", price: "PHP300.99", name: "Renz Borromeo", gmail: "renz.borromeo@cvsu.edu.ph" },
   { image: book, title: "NSTP Shirt", price: "$24.99", name: "Wendel Tuazon", gmail: "wendel.tuazon@cvsu.edu.ph" },
   { image: PE, title: "PE Uniform", price: "$49.99", name: "Robert Arpia", gmail: "robert.arpia@cvsu.edu.ph" },
-  
 ]
 
 export default function Dashboard() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row gap-5 items-center mt-10">
+    <div className="grid grid-cols-4 gap-5">
         {products.map((item, index) => (
           <Card key={index} {...item} />
         ))}
-      </div>
     </div>
   )
 }
