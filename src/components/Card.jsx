@@ -13,11 +13,11 @@ export default function Card({ image, title, price, name, gmail }) {
                 <p className="text-sm text-gray-600">Listed By</p>
 
                 <div className="flex gap-2 items-center">
-                <CiUser className="text-gray-500 bg-[white] w-6 h-7 border-2 border-gray-300 rounded" />
-                  <div className="flex flex-col">
-                <p className="text-sm text-black">{name || "Anonymous"}</p>
-                <p className="text-xs text-gray-500 underline italic">{gmail || "No Email Provided"}</p>
-                  </div>
+                  <CiUser className="text-gray-500 bg-[white] w-6 h-7 border-2 border-gray-300 rounded" />
+                    <div className="flex flex-col">
+                      <p className="text-sm text-black">{name || "Anonymous"}</p>
+                      <p className="text-xs text-gray-500 underline italic">{gmail || "No Email Provided"}</p>
+                    </div>
                 </div>
                 
             </div>

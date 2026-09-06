@@ -7,7 +7,7 @@ export default function Navigation() {
     
     return (
         <>
-        <div className="bg-[green] w-[200px] h-screen flex flex-col py-10 ">
+        <div className="bg-[green] w-[200px] h-screen flex flex-col py-10 sticky top-0 left-0">
         <nav className="flex flex-col gap-2 text-[white] text-sm pt-25 px-10">
 
             <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2" 
