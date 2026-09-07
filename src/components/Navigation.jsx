@@ -7,22 +7,22 @@ export default function Navigation() {
     
     return (
         <>
-        <div className="bg-[green] w-[200px] h-screen flex flex-col py-10 sticky top-0 left-0">
-        <nav className="flex flex-col gap-2 text-[white] text-sm pt-25 px-10">
+        <div className="bg-[green] w-[20%] h-screen flex flex-col py-10 sticky top-0 left-0">
+        <nav className="flex flex-col text-[white] text-sm pt-25 px-10">
 
-            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2" 
+            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-3 border-none rounded inline-flex items-center gap-2" 
             to="/Dashboard">
                 <MdOutlineDashboardCustomize /> Dashboard</Link>
 
-            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2"
+            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-3 border-none rounded inline-flex items-center gap-2"
             to="/Orders">
                 <FaBox /> Orders</Link>
 
-            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2"
+            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-3 border-none rounded inline-flex items-center gap-2"
             to="/Cart">
                 <FaShoppingCart /> Cart</Link>
 
-            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-2 border-none rounded inline-flex items-center gap-2"
+            <Link className="transition-colors duration-300 hover:bg-[#02E49B] px-2 py-3 border-none rounded inline-flex items-center gap-2"
              to="/profile">
                 <FaUser /> Profile</Link>
         </nav>
