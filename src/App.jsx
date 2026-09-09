@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard'
 import Navigation from "./components/Navigation"
 import Layout from './components/Layout'
 import Notification from "./components/Notification"
+import MobileLogin from "./components/MobileLogin"
 
 function App() {
  return (
@@ -15,7 +16,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/orders" element={<Notification />} />
-        <Route path="/cart" element={<Dashboard />} />
+        <Route path="/cart" element={<MobileLogin />} />
         <Route path="/profile" element={<Dashboard />} />
       </Route>
     </Routes>
