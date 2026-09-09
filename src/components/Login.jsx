@@ -81,6 +81,7 @@ export default function Login() {
 
                     <div className="bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
                         <img src={Logo}></img>
+                        
                     </div>
                 </div>
                 {showNotification && <Notification />}
