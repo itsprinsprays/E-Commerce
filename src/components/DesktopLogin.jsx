@@ -79,10 +79,11 @@ export default function Login() {
                         <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
                     </form>
 
-                    <div className="hidden sm:inline bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl">
-                        <img className="object-contain w-full h-full" alt="Logo"
+                    <div className=" bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl flex flex-col items-center justify-center relative">
+                        <img className="object-contain h-80 mb-20" alt="Logo"
                             src={Logo}></img>
-                        
+                        <h1 className="text-white text-8xl font-bold mt-4 absolute bottom-30">iskonek</h1>
+                        <h1 className="text-white text-3xl font-semibold mt-4 absolute bottom-20">Campus Marketplace</h1>
                     </div>
                 </div>
                 {showNotification && <Notification />}

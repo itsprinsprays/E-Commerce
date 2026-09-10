@@ -7,17 +7,14 @@ export default function Login() {
     return (
         <>
 
-    <div className="block sm:hidden">
-        <MobileLogin />
-    </div>
+        <div className="block sm:hidden">
+            <MobileLogin />
+        </div>
 
-    <div className="hidden sm:block">
-        <DesktopLogin />
-    </div>
-                    
-        
-                
-            
+        <div className="hidden sm:block">
+            <DesktopLogin />
+        </div>
+                     
         </>
     )
 }
