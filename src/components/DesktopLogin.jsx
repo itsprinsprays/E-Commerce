@@ -40,7 +40,7 @@ export default function Login() {
     return (
         <>
             <div className="flex justify-center items-center min-h-screen bg-[#EEF0F4] ">
-                <div className="bg-[white] w-[50%] h-[500px] flex flex-row border-none rounded-2xl shadow-2xl">
+                <div className="bg-white h-[500px] flex flex-row border-none rounded-2xl shadow-2xl">
 
                     <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-l-2xl gap-3">
 
@@ -79,11 +79,11 @@ export default function Login() {
                         <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
                     </form>
 
-                    <div className=" bg-[#1B651B] w-[50%] border-l-0 rounded-r-2xl flex flex-col items-center justify-center relative">
+                    <div className=" bg-[#1B651B] border-l-0 rounded-r-2xl flex flex-col items-center justify-center relative">
                         <img className="object-contain h-80 mb-20" alt="Logo"
                             src={Logo}></img>
-                        <h1 className="text-white text-8xl font-bold mt-4 absolute bottom-30">iskonek</h1>
-                        <h1 className="text-white text-3xl font-semibold mt-4 absolute bottom-20">Campus Marketplace</h1>
+                        <h1 className="text-4xl lg:text-7xl text-white font-bold mt-4 absolute bottom-[120px] transition-all duration-300 ease-in-out ">iskonek</h1>
+                        <h1 className="text-white lg:text-3xl lg:mt-5 font-semibold absolute bottom-[80px] transition-all duration-300 ease-in-out ">Campus Marketplace</h1>
                     </div>
                 </div>
                 {showNotification && <Notification />}

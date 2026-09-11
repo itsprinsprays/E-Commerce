@@ -7,11 +7,11 @@ export default function Login() {
     return (
         <>
 
-        <div className="block sm:hidden">
+        <div className="block lg:hidden">
             <MobileLogin />
         </div>
 
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
             <DesktopLogin />
         </div>
                      
