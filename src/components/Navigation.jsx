@@ -10,17 +10,18 @@ export default function Navigation() {
     <div className="bg-[green] w-16 sm:w-56 transition-all duration-300 ease-in-out h-screen flex flex-col py-10  shrink-0">
       <img src={Logo} alt="Logo" className="w-15 h-15 sm:w-30 sm:h-30 mx-auto" />
 
+      <div className="h-10 px-2 py-3 m-5 border items-center flex flex-row rounded bg-white text-black">
+          <CiSearch className="text-gray-400 text-xl shrink-0" />
+          <input
+            type="text"
+            placeholder="Search"
+            className="outline-none mx-1"
+            />
+      </div>
+
+      
       <nav className="flex flex-col text-white text-sm sm:text-base px-4 sm:px-6 gap-4">
 
-        
-      <div className="h-10 px-2 py-3 border items-center flex flex-row rounded bg-white text-black">
-    <CiSearch className="text-gray-400 text-xl" />
-      <input
-        type="text"
-        placeholder="Search"
-        className="outline-none mx-1 placeholder:text-gray-400"
-        />
-      </div>
 
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Dashboard">
           <MdOutlineDashboardCustomize className="text-xl shrink-0" />
