@@ -1,14 +1,26 @@
 import { FaShoppingCart, FaBox, FaUser } from "react-icons/fa";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { PiSignOutFill } from "react-icons/pi";
+import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 export default function Navigation() {
   return (
-    <div className="bg-[green] w-16 sm:w-56 transition-all duration-300 ease-in-out h-screen flex flex-col py-10 shrink-0">
+    <div className="bg-[green] w-16 sm:w-56 transition-all duration-300 ease-in-out h-screen flex flex-col py-10  shrink-0">
       <img src={Logo} alt="Logo" className="w-15 h-15 sm:w-30 sm:h-30 mx-auto" />
+
       <nav className="flex flex-col text-white text-sm sm:text-base px-4 sm:px-6 gap-4">
+
+        
+      <div className="h-10 px-2 py-3 border items-center flex flex-row rounded bg-white text-black">
+    <CiSearch className="text-gray-400 text-xl" />
+      <input
+        type="text"
+        placeholder="Search"
+        className="outline-none mx-1 placeholder:text-gray-400"
+        />
+      </div>
 
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Dashboard">
           <MdOutlineDashboardCustomize className="text-xl shrink-0" />
