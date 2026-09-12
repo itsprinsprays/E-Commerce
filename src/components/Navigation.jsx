@@ -1,5 +1,6 @@
 import { FaShoppingCart, FaBox, FaUser } from "react-icons/fa";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { PiSignOutFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
@@ -28,6 +29,11 @@ export default function Navigation() {
           <FaUser className="text-xl shrink-0" />
           <span className="hidden sm:inline">Profile</span>
         </Link>
+  
+       <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/">
+          <PiSignOutFill className="text-xl shrink-0" />
+          <span className="hidden sm:inline">Logout</span>
+       </Link>
 
       </nav>
     </div>
