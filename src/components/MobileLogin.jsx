@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import logo from "../assets/Logo.png";
 
 export default function MobileLogin() {
   const navigate = useNavigate();
@@ -30,8 +31,11 @@ export default function MobileLogin() {
     <div className="flex justify-center items-center min-h-screen bg-[#EEF0F4] ">
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-l-2xl gap-3"
+            className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-2xl gap-3 p-2"
         >
+          <div className="bg-[#1B651B] bg-[green] w-full h-20 flex justify-center items-center rounded-t-2xl">
+            <img src={logo} alt="Logo" className="w-20 h-20" />
+          </div>
             <h1 className="text-3xl text-[#1B651B]">Kumusta Kabsuhenyo!</h1>
             <p className="w-[250px] text-justify leading-relaxed text-gray-500 mb-5">
             Cavite State University - Imus Campus Marketplace
