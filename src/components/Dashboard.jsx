@@ -1,4 +1,5 @@
 import Card from "./Card"
+import { CiSearch } from "react-icons/ci";
 import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif } from "../assets";
 
 const products = [
@@ -16,10 +17,21 @@ const products = [
 
 export default function Dashboard() {
   return (
+    <>
+   <div className="h-10 px-2 py-3 my-3 border items-center flex flex-row rounded bg-white text-black gap-2 flex sm:hidden">
+          <CiSearch className="text-gray-400 text-xl shrink-0" />
+          <input
+            type="text"
+            placeholder="Search"
+            className="outline-none mx-1 w-full"
+            />
+      </div>
+
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {products.map((item, index) => (
           <Card key={index} {...item} />
         ))}
     </div>
+    </>
   )
 }
