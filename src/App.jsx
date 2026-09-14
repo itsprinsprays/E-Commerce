@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation"
 import Layout from './components/Layout'
 import Notification from "./components/Notification"
 import MobileLogin from "./components/MobileLogin"
+import Profile from "./components/Profile"
 
 function App() {
  return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/orders" element={<Notification />} />
         <Route path="/cart" element={<MobileLogin />} />
-        <Route path="/profile" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
   )
