@@ -1,4 +1,4 @@
-import { FaShoppingCart, FaBox, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { PiSignOutFill } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
@@ -26,16 +26,6 @@ export default function Navigation() {
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Dashboard">
           <MdOutlineDashboardCustomize className="text-xl shrink-0" />
           <span className="hidden sm:inline">Dashboard</span>
-        </Link>
-
-        <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Orders">
-          <FaBox className="text-xl shrink-0" />
-          <span className="hidden sm:inline">Orders</span>
-        </Link>
-
-        <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Cart">
-          <FaShoppingCart className="text-xl shrink-0" />
-          <span className="hidden sm:inline">Cart</span>
         </Link>
 
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Profile">
