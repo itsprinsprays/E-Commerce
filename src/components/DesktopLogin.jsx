@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import Logo from "../assets/Logo.png";
 import Notification from "./Notification.jsx";
 import laya from "../assets/laya.jpg";
+import imuss from "../assets/imuss.jpg";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -42,9 +43,10 @@ export default function Login() {
         <>
             <div
     className="flex justify-center items-center min-h-screen bg-cover bg-center"
-    style={{ backgroundImage: `url(${laya})` }}
->
-                <div className="bg-white h-[500px] flex flex-row border-none rounded-2xl shadow-2xl p-2">
+    style={{ backgroundImage: `url(${imuss})` }}>
+       
+
+                <div className="bg-white z-10 h-[500px] flex flex-row border-none rounded-2xl shadow-2xl p-2">
 
                     <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-l-2xl gap-3">
 
