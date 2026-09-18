@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import logo from "../assets/Logo.png";
-import laya from "../assets/laya.jpg";
+import imuss from "../assets/imuss.jpg";
 
 export default function MobileLogin() {
   const navigate = useNavigate();
@@ -31,11 +31,11 @@ export default function MobileLogin() {
 
     <div
     className="flex justify-center items-center min-h-screen bg-cover bg-center"
-    style={{ backgroundImage: `url(${laya})` }}
->
+    style={{ backgroundImage: `url(${imuss})` }}>
+      
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-2xl gap-3 p-2"
+            className="flex flex-col items-center justify-center w-[50%] bg-[#FFFFFF] border-l-0 rounded-2xl gap-3 p-2 z-10"
         >
           <div className="bg-[#1B651B] bg-[green] w-full h-20 flex justify-center items-center rounded-t-2xl">
             <img src={logo} alt="Logo" className="w-20 h-20" />
