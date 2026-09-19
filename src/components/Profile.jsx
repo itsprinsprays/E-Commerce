@@ -24,12 +24,12 @@ export default function Profile() {
                 <h1>4.9 (102 Reviews)</h1>
             </div>
 
-            <div className="flex flex-row justify-center items-center gap-20">
-                <button className="border p-1 w-40 rounded bg-[green] text-white flex justify-center items-center gap-2">
+            <div className="flex flex-row justify-center items-center gap-20 my-2">
+                <button className="border p-1 w-40 rounded bg-[green] text-white flex justify-center items-center gap-2 transition-color duration-300 hover:bg-[#02E49B]">
                     <FaFacebookMessenger /> Message</button>
-                <button className="flex justify-center items-center gap-2 border w-40 p-1 text-[green] rounded">
+                <button className="flex justify-center items-center gap-2 border w-40 p-1 text-[green] rounded transition-color duration-300 hover:bg-[green] hover:text-white">
                     <FaShare /> Profile</button>
-                <button className="flex items-center justify-center gap-2 w-40 p-1 border rounded text-[green]">
+                <button className="flex items-center justify-center gap-2 w-40 p-1 border rounded text-[green] transition-color duration-300 hover:bg-[green] hover:text-white">
                     <MdReport /> User</button>
             </div>
 
