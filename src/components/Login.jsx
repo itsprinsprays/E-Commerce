@@ -1,6 +1,5 @@
 import MobileLogin from "./MobileLogin.jsx";
 import DesktopLogin from "./DesktopLogin.jsx";
-import laya from "../assets/laya.jpg";
 
 export default function Login() {
     return (
