@@ -1,13 +1,14 @@
 import { CiUser } from "react-icons/ci";
 
-export default function Card({ image, title, price, name, gmail }) {
+export default function Card({ image, title, price, name, gmail, campus }) {
   return (
     <div 
       className={`w-full bg-[white] flex flex-col rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 gap-2 overflow-hidden`}>
           {image && <img src={image} className="w-full h-40 sm:h-48 object-cover border-2 border-gray-300" />}
 
-        <div className="p-3 flex flex-col gap-2">
+        <div className="p-3 flex flex-col gap-2 relative">
           <p className="text-base sm:text-lg font-semibold truncate">{title}</p>
+          <p className="absolute right-6 text-gray-600">{campus}</p>
           <p className="text-sm sm:text-base text-gray-500">{price}</p>
 
             <div className="w-full bg-gray-200 rounded-b-lg p-1 mt-2 flex flex-col gap-1">
