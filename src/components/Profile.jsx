@@ -2,8 +2,9 @@ import laurence from "../assets/laurence.jpg"
 import imuss from "../assets/imuss.jpg"
 import { FaFacebookMessenger, FaShare  } from "react-icons/fa";
 import { MdReport } from "react-icons/md";
-import Card from "./Card"
 import { sablay, polo, book, PE } from "../assets";
+import CardProfile from "./CardProfile";
+import Card from "./Card";
 
 export default function Profile() {
 
@@ -34,7 +35,7 @@ export default function Profile() {
                 <h1>4.9 (102 Reviews)</h1>
             </div>
 
-            <div className="flex flex-row justify-center items-center gap-20 my-2">
+            <div className="flex flex-row justify-center items-center gap-1 sm:gap-4 my-2">
                 <button className="border p-1 w-40 rounded bg-[green] text-white flex justify-center items-center gap-2 transition-color duration-300 hover:bg-[#02E49B]">
                     <FaFacebookMessenger /> Message</button>
                 <button className="flex justify-center items-center gap-2 border w-40 p-1 text-[green] rounded transition-color duration-300 hover:bg-[green] hover:text-white">
@@ -48,7 +49,7 @@ export default function Profile() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {product.map((item, index) => (
-                      <Card key={index} {...item} />
+                      <CardProfile key={index} {...item} />
                     ))}
                 </div>
 
