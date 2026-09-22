@@ -74,11 +74,6 @@ export default function MobileLogin() {
             Log In
             </button>
 
-            <button className="flex items-center gap-2 border rounded px-3 py-2 pl-9 w-[65%]">
-            <FcGoogle className="w-5 h-5" />
-            <span>Sign in with Google</span>
-            </button>
-
             <p className="text-gray-500">
             Don't have an account yet?{" "}
             <span className="text-[green]">Sign Up</span>

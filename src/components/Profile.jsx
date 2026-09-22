@@ -41,7 +41,7 @@ export default function Profile() {
                 <button className="flex justify-center items-center gap-2 border w-40 p-1 text-[green] rounded transition-color duration-300 hover:bg-[green] hover:text-white">
                     <FaShare /> Profile</button>
                 <button className="flex items-center justify-center gap-2 w-40 p-1 border rounded text-[green] transition-color duration-300 hover:bg-[green] hover:text-white">
-                    <MdReport /> User</button>
+                    <MdReport /> Report User</button>
             </div>
 
             <div className="bg-[gray] h-1 mt-4"></div>
