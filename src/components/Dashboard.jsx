@@ -1,4 +1,6 @@
 import Card from "./Card"
+import Product from "./Product";
+import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif } from "../assets";
 
@@ -15,6 +17,14 @@ const products = [
   { image: CrimPoloBacoor, title: "Criminology Polo", price: "PHP250.99", name: "Robert Arpia", gmail: "robert.arpia@cvsu.edu.ph", campus: "Imus" }
 ]
 
+const [showProduct, setShowProduct] = useState(false);
+
+
+
+function show() {
+  setShowProduct(true);
+}
+
 export default function Dashboard() {
   return (
     <>
@@ -27,10 +37,12 @@ export default function Dashboard() {
             />
       </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 cursor-pointer" onClick={show}>
         {products.map((item, index) => (
           <Card key={index} {...item} />
         ))}
+
+      {showProduct && <Product />}
     </div>
     </>
   )
