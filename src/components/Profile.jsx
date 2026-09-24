@@ -20,7 +20,6 @@ export default function Profile() {
         <div className="flex flex-col relative">
 
             <div className="bg-[green] h-50 w-full flex justify-center items-center bg-cover" style={{backgroundImage: `url(${imuss})`}}> </div>
-            {/* <div className="bg-[green] h-50 w-full flex justify-center items-center bg-cover"   > </div> */}
             <div className=" h-full p-9 ">
                 <div className="bg-white h-48 w-48 rounded-full p-1.5 absolute top-20 left-1/2 transform -translate-x-1/2 ">  
 
