@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Product from "./Product";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif } from "../assets";
@@ -17,12 +18,17 @@ const products = [
 ]
 
 
-
-function show() {
-  setShowProduct(true);
-}
-
 export default function Dashboard() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  function show(item) {
+    setSelectedProduct(item);
+  }
+
+  function closeProduct() {
+    setSelectedProduct(null);
+  }
+
   return (
     <>
    <div className="h-10 px-2 py-3 my-3 border items-center flex flex-row rounded bg-white text-black gap-2 flex sm:hidden">
@@ -34,13 +40,15 @@ export default function Dashboard() {
             />
       </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" onClick={show}>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {products.map((item, index) => (
-          <Card key={index} {...item} />
+          <Card key={index} {...item} onClick={() => show(item)}/>
         ))}
 
-     
     </div>
+
+          {selectedProduct && <Product product={selectedProduct} onClose={closeProduct} />}
+
     </>
   )
 }
