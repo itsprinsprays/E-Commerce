@@ -1,4 +1,5 @@
 import { FaArrowLeft, FaArrowRight, FaFacebookMessenger  } from "react-icons/fa";
+import { IoLocation } from "react-icons/io5";
 import { FaBackwardStep } from "react-icons/fa6";
 import { useState } from "react";
 export default function Product({ product, onClose }) {
@@ -27,7 +28,7 @@ export default function Product({ product, onClose }) {
                 <img src={product.images[pictureIndex]} alt={product.title} className="w-full h-full object-contain bg-[green]" /> 
               </div>
 
-              <div className="flex flex-row items-center justify-center gap-4  py-2 text-2xl text-white">
+              <div className="flex flex-row items-center justify-center gap-4  py-4 text-2xl text-white">
                 <FaArrowLeft className="bg-black rounded-full h-full w-8 p-2" onClick={prevImage}/>
                 <FaArrowRight className="bg-black rounded-full h-full w-8 p-2" onClick={nextImage}/>
               </div>
@@ -47,7 +48,13 @@ export default function Product({ product, onClose }) {
 
               <div className="font-bold bg-[green] my-2 h-full rounded-lg p-2 w-50 mt-2 shadow-lg">
                 <h1 className="text-white">Seller Information:</h1>
-                <img src={product.picture} className="h-10 rounded-full" />
+                <div className="flex flex-row gap-2 text-white">
+                  <img src={product.picture} className="h-10 rounded-full" />
+                  <div>
+                    <p>{product.name}</p>
+                    <IoLocation className="inline"/> <span className="font-semibold">{product.campus} Campus</span>
+                  </div>
+                </div>
               </div>     
 
             </div>
