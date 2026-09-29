@@ -1,6 +1,19 @@
 import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
 import { FaBackwardStep } from "react-icons/fa6";
+import { useState } from "react";
 export default function Product({ product, onClose }) {
+
+  const [pictureIndex, setPictureIndex] = useState(0);
+
+
+  function nextImage() {
+      setPictureIndex((prev) => (prev + 1) % product.images.length);
+  }
+
+  function prevImage() {
+    setPictureIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+  }
+
   return (
     <>
       <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
@@ -11,12 +24,12 @@ export default function Product({ product, onClose }) {
           <div className="flex justify-between ">
             <div className="flex flex-col">
               <div className="p-2 border rounded-lg w-64 h-64 overflow-hidden mx-4">
-                <img src={product.image} alt={product.title} className="w-full h-full object-contain bg-[green]" />
+                <img src={product.images[pictureIndex]} alt={product.title} className="w-full h-full object-contain bg-[green]" /> 
               </div>
 
               <div className="flex flex-row items-center justify-center gap-4  py-2 text-2xl text-white">
-                <FaArrowLeft className="bg-black rounded-full h-full w-8 p-2" />
-                <FaArrowRight className="bg-black rounded-full h-full w-8 p-2" onClick={product.image1}/>
+                <FaArrowLeft className="bg-black rounded-full h-full w-8 p-2" onClick={prevImage}/>
+                <FaArrowRight className="bg-black rounded-full h-full w-8 p-2" onClick={nextImage}/>
               </div>
             </div>
 
