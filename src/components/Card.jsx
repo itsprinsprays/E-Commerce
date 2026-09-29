@@ -4,7 +4,7 @@ export default function Card({ images, title, price, name, gmail, campus, onClic
   return (
     <div 
       className={`w-full bg-[white] flex flex-col rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 gap-2 overflow-hidden`}>
-          {images && <img src={images} className="w-full h-40 sm:h-48 object-cover border-2 border-gray-300 cursor-pointer" onClick={onClick} />}
+          {images && <img src={images[0]} className="w-full h-40 sm:h-48 object-cover border-2 border-gray-300 cursor-pointer" onClick={onClick} />}
 
         <div className="p-3 flex flex-col gap-2 relative">
           <div className="flex flex-row justify-between">
@@ -22,6 +22,7 @@ export default function Card({ images, title, price, name, gmail, campus, onClic
                       <p className="text-sm text-black truncate">{name || "Anonymous"}</p>
                       <p className="text-xs text-gray-500 underline italic truncate">{gmail || "No Email Provided"}</p>
                     </div>
+
                 </div>
                 
             </div>

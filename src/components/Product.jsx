@@ -1,4 +1,4 @@
-import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaFacebookMessenger  } from "react-icons/fa";
 import { FaBackwardStep } from "react-icons/fa6";
 import { useState } from "react";
 export default function Product({ product, onClose }) {
@@ -33,13 +33,23 @@ export default function Product({ product, onClose }) {
               </div>
             </div>
 
-            <div className=" w-120 h-full flex flex-col items-start px-10 py-5 ">
+            <div className=" w-120 h-full flex flex-col items-start px-4 ">
               <h2 className="text-2xl font-bold">{product.title}</h2>
               <p className="text-[green] text-xl">{product.price}</p>
               <p className="font-bold pt-3 text-lg">Details</p>
               <p>{product.details[1]}</p>
               <p>{product.details[2]}</p>
               <p>{product.details[3]}</p>
+
+              <div className="flex items-center justify-center bg-[green] text-[white] p-2 w-50 gap-1 mt-5 transition-color duration-300 hover:bg-[#02E49B] hover:text-black rounded shadow-lg">
+                <FaFacebookMessenger /> <button onClick={prevImage}>Send Message</button>
+              </div>
+
+              <div className="font-bold bg-[green] my-2 h-full rounded-lg p-2 w-50 mt-2 shadow-lg">
+                <h1 className="text-white">Seller Information:</h1>
+                <img src={product.picture} className="h-10 rounded-full" />
+              </div>     
+
             </div>
 
 

@@ -2,10 +2,10 @@ import Card from "./Card"
 import Product from "./Product";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif } from "../assets";
+import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif, laurence } from "../assets";
 
 const products = [
-  { images: [sablay, polo, book], title: "Pajah Sablay", price: "PHP500", name: "Prince Benitez", gmail: "princejediel.benitez@cvsu.edu.ph", campus: "Imus", details: {1: "Medium", 2: "Twice Nagamit", 3: "Hindi Kupas"} },
+  { images: [sablay, polo, book, PE], title: "Pajah Sablay", price: "PHP500", picture: laurence, name: "Prince Benitez", gmail: "princejediel.benitez@cvsu.edu.ph", campus: "Imus", details: {1: "Medium", 2: "Twice Nagamit", 3: "Hindi Kupas"} },
   { images: [polo], title: "Polo Shirt", price: "PHP300.99", name: "Renz Borromeo", gmail: "renz.borromeo@cvsu.edu.ph", campus: "Indang" },
   { images: [book], title: "NSTP Shirt", price: "PHP250.00", name: "Wendel Tuazon", gmail: "wendel.tuazon@cvsu.edu.ph", campus: "Gentri" },
   { images: [PE], title: "PE Uniform Set", price: "PHP500.99", name: "Robert Arpia", gmail: "robert.arpia@cvsu.edu.ph", campus: "Dasmarinas" },

@@ -8,5 +8,6 @@ import EducUnif from "../assets/EducUnif.png"
 import EducUnif1 from "../assets/EducUnif1.png"
 import CrimPoloBacoor from "../assets/CrimPoloBacoor.png"
 import PsycUnif from "../assets/PsycUnif.png"
+import laurence from "../assets/laurence.jpg"
 
-export { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif };
+export { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif, laurence };
