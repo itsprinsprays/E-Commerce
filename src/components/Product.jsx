@@ -18,17 +18,17 @@ export default function Product({ product, onClose }) {
   return (
     <>
       <div className="fixed inset-0 bg-white/50 flex items-center justify-center z-50">
-        <div className="bg-white p-6 rounded-lg shadow-lg h-100 w-140 flex flex-wrap">
+        <div className="bg-white p-6 rounded-lg shadow-lg h-100 w-140 flex flex-wrap ">
           
           <FaBackwardStep className="bg-black text-white h-8 w-8 rounded p-1" onClick={onClose}/> 
 
           <div className="flex justify-between ">
             <div className="flex flex-col">
-              <div className="p-2 border rounded-lg w-64 h-64 overflow-hidden mx-4">
+              <div className="p-2 border rounded-lg w-64 h-64 overflow-hidden mx-4 my-2">
                 <img src={product.images[pictureIndex]} alt={product.title} className="w-full h-full object-contain bg-[green]" /> 
               </div>
 
-              <div className="flex flex-row items-center justify-center gap-4  py-4 text-2xl text-white">
+              <div className="flex flex-row items-center justify-center gap-4 py-4 text-2xl text-white">
                 <FaArrowLeft className="bg-black rounded-full h-full w-8 p-2" onClick={prevImage}/>
                 <FaArrowRight className="bg-black rounded-full h-full w-8 p-2" onClick={nextImage}/>
               </div>
@@ -48,7 +48,7 @@ export default function Product({ product, onClose }) {
 
               <div className="font-bold bg-[green] my-2 h-full rounded-lg p-2 w-50 mt-2 shadow-lg">
                 <h1 className="text-white">Seller Information:</h1>
-                <div className="flex flex-row gap-2 text-white">
+                <div className="flex flex-row items-center gap-2 text-white">
                   <img src={product.picture} className="h-10 rounded-full" />
                   <div>
                     <p>{product.name}</p>
