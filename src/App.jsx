@@ -4,6 +4,7 @@ import './App.css'
 import Login from "./components/Login"
 import Dashboard from './components/Dashboard'
 import Navigation from "./components/Navigation"
+import SignUp from "./components/SignUp"
 import Layout from './components/Layout'
 import Notification from "./components/Notification"
 import MobileLogin from "./components/MobileLogin"
@@ -13,6 +14,7 @@ function App() {
  return (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
 
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />

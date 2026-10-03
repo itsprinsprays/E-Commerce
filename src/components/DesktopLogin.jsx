@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "../assets/Logo.png";
@@ -77,7 +78,7 @@ export default function Login() {
                         <button type="submit" className="border w-[65%] rounded bg-[green] h-10 text-sm text-[white] transition-colors duration-300 hover:bg-[#02E49B] hover:text-black">
                             Log In</button>
 
-                        <p className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></p>
+                        <Link to="/signup" className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></Link>
                     </form>
 
                     <div className=" bg-[#1B651B] border-l-0 rounded-r-2xl flex flex-col items-center justify-center relative">
