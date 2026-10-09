@@ -29,7 +29,7 @@ export default function SignUp() {
 
         <div className="absolute inset-0 bg-white/50"></div>
 
-            <div className="z-10 bg-[green] w-80 h-120 rounded-2xl shadow-lg flex flex-col items-center pt-16 gap-3">
+            <div className="z-10 bg-[#163120] w-90 h-120 rounded-3xl shadow-lg flex flex-col items-center pt-16 gap-3">
             <h1 className="text-white text-2xl font-bold">Hello, Sign Up!</h1>
 
             <form className="flex flex-col items-center justify-center gap-3"> 
@@ -42,7 +42,7 @@ export default function SignUp() {
                     name="username"
                     value={account.username}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm placeholder:text-sm"
                     />
                 </div>
 
@@ -54,7 +54,7 @@ export default function SignUp() {
                     name="campus"
                     value={account.campus}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
                     />
                 </div>
                 
@@ -66,7 +66,7 @@ export default function SignUp() {
                     name="cvsuMail"
                     value={account.cvsuMail}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
                     />
                 </div>
 
@@ -78,7 +78,7 @@ export default function SignUp() {
                     name="password"
                     value={account.password}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
                     />
                 </div>
 
@@ -90,11 +90,12 @@ export default function SignUp() {
                     name="confirmPassword"
                     value={account.confirmPassword}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
                     />
                 </div>
 
-                <button type="submit">Sign Up</button>
+                <button type="submit" className="bg-white border rounded-2xl h-10 w-full text-black font-bold hover:bg-gray-200 transition duration-300">Sign Up</button>
+                <p className="text-white text-sm">Already have an account? <a href="/" className="text-green-500 hover:underline">Login</a></p>
                 
                 
             </form>
