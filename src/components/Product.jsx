@@ -52,7 +52,7 @@ export default function Product({ product, onClose }) {
                   <img src={product.picture} className="h-10 rounded-full" />
                   <div>
                     <p>{product.name}</p>
-                    <IoLocation className="inline"/> <span className="font-semibold">{product.campus} Campus</span>
+                    <IoLocation className="inline"/> <span className="font-semibold truncate">{product.campus}</span>
                   </div>
                 </div>
               </div>     
