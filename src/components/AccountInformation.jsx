@@ -28,9 +28,10 @@ export default function AccountInformation( {onClick} ) {
                     <input 
                     type="text"
                     placeholder="Last Name"
-                    name="LastName"
+                    name="lastName"
                     value={accountInformation.lastName}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -40,9 +41,10 @@ export default function AccountInformation( {onClick} ) {
                     <input 
                     type="text"
                     placeholder="First Name"
-                    name="FirstName"
+                    name="firstName"
                     value={accountInformation.firstName}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -52,9 +54,10 @@ export default function AccountInformation( {onClick} ) {
                     <input 
                     type="text"
                     placeholder="Middle Name"
-                    name="MiddleName"
+                    name="middleName"
                     value={accountInformation.middleName}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -64,9 +67,10 @@ export default function AccountInformation( {onClick} ) {
                     <input 
                     type="text"
                     placeholder="Phone Number"
-                    name="PhoneNumber"
+                    name="phoneNumber"
                     value={accountInformation.phoneNumber}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>

@@ -51,6 +51,7 @@ export default function SignUp() {
                     name="username"
                     value={account.username}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -63,6 +64,7 @@ export default function SignUp() {
                     name="campus"
                     value={account.campus}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -75,6 +77,7 @@ export default function SignUp() {
                     name="cvsuMail"
                     value={account.cvsuMail}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -87,6 +90,7 @@ export default function SignUp() {
                     name="password"
                     value={account.password}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
@@ -99,6 +103,7 @@ export default function SignUp() {
                     name="confirmPassword"
                     value={account.confirmPassword}
                     onChange={handleChanges}
+                    required
                     className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
