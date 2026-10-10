@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import logo from "../assets/Logo.png";
@@ -74,10 +75,7 @@ export default function MobileLogin() {
             Log In
             </button>
 
-            <p className="text-gray-500">
-            Don't have an account yet?{" "}
-            <span className="text-[green]">Sign Up</span>
-            </p>
+             <Link to="/signup" className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></Link>
         </form>
       </div>
     </>

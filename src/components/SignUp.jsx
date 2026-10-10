@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaRegUserCircle  } from "react-icons/fa";
 import { TbLockPassword } from "react-icons/tb";
 import { MdMarkEmailRead } from "react-icons/md";
+import AccountInformation from "./AccountInformation";
 import laya from "../assets/laya.png";
 
 export default function SignUp() {
@@ -34,10 +35,13 @@ export default function SignUp() {
 
         <div className="absolute inset-0 bg-white/50"></div>
 
-            <div className="z-10 bg-[#003300] w-90 h-120 rounded-3xl shadow-lg flex flex-col items-center pt-13 gap-3">
-            <h1 className="text-white text-2xl font-semibold">Hello, Sign Up!</h1>
+        {!next && <AccountInformation onClick={nextStep}/> }
+
+            {next && 
+            <div className="z-10 bg-[#003300] w-90 h-120 rounded-3xl shadow-lg flex flex-col items-center pt-13 gap-3"> 
 
             <form className="flex flex-col items-center justify-center gap-3"> 
+                <h1 className="text-white text-2xl font-semibold">Hello, Sign Up!</h1>
 
                 <div className="flex flex-row items-center gap-2 rounded border-gray-200 border p-2 w-full">
                     <FaRegUserCircle className="text-white text-2xl" />
@@ -101,10 +105,10 @@ export default function SignUp() {
 
                 <button type="submit" className="bg-white border rounded-2xl h-10 w-full text-black font-bold hover:bg-gray-200 transition duration-300">Sign Up</button>
                 <p className="text-white text-sm">Already have an account? <a href="/" className="text-green-500 hover:underline">Login</a></p>
-                
-                
+                 
             </form>
             </div>
+            }
         </div>
         </>
     )
