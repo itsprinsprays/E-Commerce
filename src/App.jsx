@@ -9,12 +9,13 @@ import Layout from './components/Layout'
 import Notification from "./components/Notification"
 import MobileLogin from "./components/MobileLogin"
 import Profile from "./components/Profile"
+import AccountInformation from "./components/AccountInformation"
 
 function App() {
  return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/AccountInformation" element={<AccountInformation />} />
 
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />

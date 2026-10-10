@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaRegUserCircle, FaRegEnvelope  } from "react-icons/fa";
+import { FaRegUserCircle  } from "react-icons/fa";
 import { TbLockPassword } from "react-icons/tb";
 import { MdMarkEmailRead } from "react-icons/md";
 import laya from "../assets/laya.png";
 
 export default function SignUp() {
-    const navigate = useNavigate();
     const [account, setAccount] = useState({
         username: "",
         campus: "",
@@ -14,6 +13,12 @@ export default function SignUp() {
         password: "",
         confirmPassword: ""
     });
+
+    const [next, setNext] = useState(false);
+
+    function nextStep() {
+        setNext(true);
+    }
 
     function handleChanges(e) {
         setAccount({
@@ -29,8 +34,8 @@ export default function SignUp() {
 
         <div className="absolute inset-0 bg-white/50"></div>
 
-            <div className="z-10 bg-[#163120] w-90 h-120 rounded-3xl shadow-lg flex flex-col items-center pt-16 gap-3">
-            <h1 className="text-white text-2xl font-bold">Hello, Sign Up!</h1>
+            <div className="z-10 bg-[#003300] w-90 h-120 rounded-3xl shadow-lg flex flex-col items-center pt-13 gap-3">
+            <h1 className="text-white text-2xl font-semibold">Hello, Sign Up!</h1>
 
             <form className="flex flex-col items-center justify-center gap-3"> 
 
@@ -42,7 +47,7 @@ export default function SignUp() {
                     name="username"
                     value={account.username}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm placeholder:text-sm"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
 
@@ -54,7 +59,7 @@ export default function SignUp() {
                     name="campus"
                     value={account.campus}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
                 
@@ -66,7 +71,7 @@ export default function SignUp() {
                     name="cvsuMail"
                     value={account.cvsuMail}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
 
@@ -78,7 +83,7 @@ export default function SignUp() {
                     name="password"
                     value={account.password}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
 
@@ -90,7 +95,7 @@ export default function SignUp() {
                     name="confirmPassword"
                     value={account.confirmPassword}
                     onChange={handleChanges}
-                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white text-sm"
+                    className="border-l-2 border-gray-200 px-2 placeholder:text-gray-400 w-full outline-none text-white"
                     />
                 </div>
 
