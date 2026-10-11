@@ -1,5 +1,6 @@
 import { FaUser } from "react-icons/fa";
-import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { MdOutlineDashboardCustomize, MdOutlineReport  } from "react-icons/md";
+import { FaUsers } from "react-icons/fa6";
 import { PiSignOutFill } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
@@ -39,6 +40,21 @@ export default function Navigation() {
        </Link>
 
       </nav>
+      <hr className="flex flex border-gray-300 mt-4"></hr>
+      <h4 className="hidden sm:flex p-1text-black bg-gray-200 flex items-center justify-center w-full mb-4">ADMINSTRATION</h4>
+
+       <nav className="flex flex-col text-white text-sm sm:text-base px-4 sm:px-6 gap-4">
+        <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/users">
+          <FaUsers className="text-xl shrink-0" />
+          <span className="hidden sm:inline">Users</span>
+        </Link>
+
+        <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/reports">
+          <MdOutlineReport className="text-xl shrink-0" />
+          <span className="hidden sm:inline">Reports</span>
+        </Link> 
+      </nav>
+
     </div>
   );
 }
