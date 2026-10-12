@@ -10,17 +10,17 @@ import Notification from "./components/Notification"
 import MobileLogin from "./components/MobileLogin"
 import Profile from "./components/Profile"
 import AccountInformation from "./components/AccountInformation"
+import Listing from "./components/Listing"
 
 function App() {
  return (
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/AddProduct" element={<Listing />} />
 
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/orders" element={<Notification />} />
-        <Route path="/cart" element={<MobileLogin />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
     </Routes>
