@@ -1,6 +1,6 @@
 import { FaUser } from "react-icons/fa";
 import { MdOutlineDashboardCustomize, MdOutlineReport  } from "react-icons/md";
-import { FaUsers } from "react-icons/fa6";
+import { FaUsers, FaPlus  } from "react-icons/fa6";
 import { PiSignOutFill } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
@@ -32,6 +32,11 @@ export default function Navigation() {
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/Profile">
           <FaUser className="text-xl shrink-0" />
           <span className="hidden sm:inline">Profile</span>
+        </Link>
+
+        <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/AddProduct">
+          <FaPlus className="text-xl shrink-0" />
+          <span className="hidden sm:inline">Add New Listing</span>
         </Link>
   
        <Link className="flex items-center gap-3 hover:bg-[#02E49B] px-2 py-3 rounded transition-colors duration-300" to="/">
