@@ -1,5 +1,6 @@
 import { useState } from "react";
 import laya from "../assets/laya.png";
+import { FaBackwardStep } from "react-icons/fa6";
 
 export default function Listing() {
 
@@ -25,10 +26,12 @@ export default function Listing() {
             className="flex min-h-screen bg-cover bg-center"
             style={{ backgroundImage: `url(${laya})` }}>
 
-        <div className="bg-black/50  w-50 h-screen flex flex-col items-center p-2">
+        <div className="bg-black/50  w-60 h-screen flex flex-col items-center p-3" onClick={() => window.history.back()}>
+            <FaBackwardStep className="text-white text-2xl self-start cursor-pointer" />
             <h1 className="text-lg font-semibold self-start text-white">Required</h1>
             <p className="text-green-300 text-sm flex self-start">Be as descriptive as possible</p>
 
+            <form className="flex flex-col w-full gap-2 mt-5" onSubmit={(e) => e.preventDefault()}>
             <input
             type="text"
             placeholder="Title"
@@ -66,6 +69,7 @@ export default function Listing() {
             />
 
             <button type="submit" className="bg-green-500 text-white p-2 px-8 rounded mt-3 duration-300 hover:bg-green-600">Submit</button>
+            </form>
     
         </div>
         </div>
