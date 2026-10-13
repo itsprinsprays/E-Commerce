@@ -26,7 +26,7 @@ export default function Listing() {
             className="flex min-h-screen bg-cover bg-center"
             style={{ backgroundImage: `url(${laya})` }}>
 
-        <div className="bg-black/50  w-60 h-screen flex flex-col items-center p-3" onClick={() => window.history.back()}>
+        <div className="bg-black/50  w-60 h-screen flex flex-col items-center p-3" onClick={() => window.history.back()} >
             <FaBackwardStep className="text-white text-2xl self-start cursor-pointer" />
             <h1 className="text-lg font-semibold self-start text-white">Required</h1>
             <p className="text-green-300 text-sm flex self-start">Be as descriptive as possible</p>
