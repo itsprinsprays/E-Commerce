@@ -25,7 +25,6 @@ export default function Navigation() {
       
       <nav className="flex flex-col text-white text-sm sm:text-base px-4 sm:px-6 ">
 
-
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/Dashboard">
           <MdOutlineDashboardCustomize className="text-xl shrink-0" />
           <span className="hidden sm:inline">Dashboard</span>
@@ -73,7 +72,7 @@ export default function Navigation() {
         
         <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/notes">
           <CiStickyNote className="text-xl shrink-0" />
-          <span className="hidden sm:inline">Notes</span>
+          <span className="hidden sm:inline">Listing</span>
         </Link>
       </nav>
 

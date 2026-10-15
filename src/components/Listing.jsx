@@ -1,6 +1,8 @@
 import { useState } from "react";
 import laya from "../assets/laya.png";
+import laurence from "../assets/laurence.jpg";
 import { FaBackwardStep } from "react-icons/fa6";
+
 
 export default function Listing() {
 
@@ -26,8 +28,17 @@ export default function Listing() {
             className="flex min-h-screen bg-cover bg-center"
             style={{ backgroundImage: `url(${laya})` }}>
 
-        <div className="bg-black/50  w-60 h-screen flex flex-col items-center p-3" onClick={() => window.history.back()}>
+        <div className="bg-black/50 w-60 h-screen flex flex-col items-center p-3" onClick={() => window.history.back()}>
             <FaBackwardStep className="text-white text-2xl self-start cursor-pointer" />
+
+            <div className="flex flex-row self-start gap-2 items-center mt-5">
+                <img src={laurence} alt="Profile" className="w-20 h-20 rounded-full border-2 border-white mt-3" />
+                <div className="flex flex-col">
+                <h1 className="text-white text-lg font-semibold mt-2">Laurence</h1>
+                <p className="text-green-300 text-sm"> Online</p>
+                </div>
+            </div>
+
             <h1 className="text-lg font-semibold self-start text-white">Required</h1>
             <p className="text-green-300 text-sm flex self-start">Be as descriptive as possible</p>
 
