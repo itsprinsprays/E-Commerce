@@ -1,8 +1,8 @@
 import { FaArrowLeft, FaArrowRight, FaFacebookMessenger  } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5";
 import { FaBackwardStep } from "react-icons/fa6";
 import { useState } from "react";
-export default function Product({ product, onClose }) {
+import ProductProfile from "./ProductProfile";
+export default function Product({ product, onClose, Profile }) {
 
   const [pictureIndex, setPictureIndex] = useState(0);
 
@@ -46,16 +46,7 @@ export default function Product({ product, onClose }) {
                 <FaFacebookMessenger /> <button onClick={prevImage}>Send Message</button>
               </div>
 
-              <div className="font-bold bg-[green] my-2 h-full rounded-lg p-2 w-50 mt-2 shadow-lg">
-                <h1 className="text-white">Seller Information:</h1>
-                <div className="flex flex-row items-center gap-2 text-white">
-                  <img src={product.picture} className="h-10 rounded-full" />
-                  <div>
-                    <p>{product.name}</p>
-                    <IoLocation className="inline"/> <span className="font-semibold truncate">{product.campus}</span>
-                  </div>
-                </div>
-              </div>     
+              <ProductProfile Profile={Profile} />
 
             </div>
 

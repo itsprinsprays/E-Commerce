@@ -46,7 +46,7 @@ export default function Dashboard() {
 
     </div>
 
-          {selectedProduct && <Product product={selectedProduct} onClose={closeProduct} />}
+          {selectedProduct && <Product product={selectedProduct} onClose={closeProduct} Profile={selectedProduct} />}
 
     </>
   )
