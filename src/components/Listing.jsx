@@ -28,7 +28,7 @@ export default function Listing() {
             className="flex min-h-screen bg-cover bg-center "
             style={{ backgroundImage: `url(${laya})` }}>
 
-        <div className="bg-black/50 w-60 h-screen flex flex-col items-center p-3">
+        <div className="bg-black/50 w-80 h-screen flex flex-col items-center p-3">
             <FaBackwardStep className="text-white text-2xl self-start cursor-pointer" onClick={() => window.history.back()}/>
 
             <div className="flex flex-row self-start gap-2 items-center mt-5">
@@ -83,10 +83,21 @@ export default function Listing() {
             </form>
     
         </div>
-        <div className="flex flex-col w-screen h-full items-center justify-center gap-2">
-        <div className="bg-black/50 w-96 h-96 flex flex-col items-center justify-center gap-2 rounded-lg">
-            <h1 className="text-white">Hello</h1>
-        </div>
+        <div className="flex flex-col w-screen h-full items-center justify-center gap-2 p-4 m-4 relative ">
+            <div className="bg-black/50 w-full h-155 flex flex-col items-center justify-center gap-2 rounded-lg p-12 ">
+                <h1 className="text-white absolute top-12 left-12">Preview</h1>
+                <div className="flex flex-col w-full h-100 bg-gray-300 rounded-lg p-4 mt-12">
+
+                </div>
+
+                <div className="flex flex-col w-full text-white text-lg">
+                    <p>Title : </p>
+                    <p>Price : </p>
+                    <p>Details : </p>
+                    <p>Condition :</p>
+                </div>
+
+            </div>
         </div>
         </div>
         </>
