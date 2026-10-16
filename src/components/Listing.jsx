@@ -2,9 +2,15 @@ import { useState } from "react";
 import laya from "../assets/laya.png";
 import laurence from "../assets/laurence.jpg";
 import { FaBackwardStep } from "react-icons/fa6";
-
+import ProductProfile from "./ProductProfile";
 
 export default function Listing() {
+
+    const Profile = {
+    picture: laurence,
+    name: "Laurence",
+    campus: "Imus",
+    };
 
     const [listing, setListing] = useState({
         Title: "",
@@ -90,11 +96,16 @@ export default function Listing() {
 
                 </div>
 
+                <div className="flex flex-row  w-full">
                 <div className="flex flex-col w-full text-white text-lg">
                     <p>Title : </p>
                     <p>Price : </p>
                     <p>Details : </p>
                     <p>Condition :</p>
+                </div>
+                <div>
+                <ProductProfile Profile={Profile} />
+                </div>
                 </div>
 
             </div>
