@@ -25,11 +25,11 @@ export default function Listing() {
         <>
 
         <div
-            className="flex min-h-screen bg-cover bg-center"
+            className="flex min-h-screen bg-cover bg-center "
             style={{ backgroundImage: `url(${laya})` }}>
 
-        <div className="bg-black/50 w-60 h-screen flex flex-col items-center p-3" onClick={() => window.history.back()}>
-            <FaBackwardStep className="text-white text-2xl self-start cursor-pointer" />
+        <div className="bg-black/50 w-60 h-screen flex flex-col items-center p-3">
+            <FaBackwardStep className="text-white text-2xl self-start cursor-pointer" onClick={() => window.history.back()}/>
 
             <div className="flex flex-row self-start gap-2 items-center mt-5">
                 <img src={laurence} alt="Profile" className="w-20 h-20 rounded-full border-2 border-white mt-3" />
@@ -82,6 +82,11 @@ export default function Listing() {
             <button type="submit" className="bg-green-500 text-white p-2 px-8 rounded mt-3 duration-300 hover:bg-green-600">Submit</button>
             </form>
     
+        </div>
+        <div className="flex flex-col w-screen h-full items-center justify-center gap-2">
+        <div className="bg-black/50 w-96 h-96 flex flex-col items-center justify-center gap-2 rounded-lg">
+            <h1 className="text-white">Hello</h1>
+        </div>
         </div>
         </div>
         </>
