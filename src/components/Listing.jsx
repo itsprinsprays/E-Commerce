@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useRef ,useState } from "react";
 import laya from "../assets/laya.png";
 import laurence from "../assets/laurence.jpg";
 import { FaBackwardStep } from "react-icons/fa6";
 import ProductProfile from "./ProductProfile";
 
 export default function Listing() {
+
+    const fileInputRef = useRef(null);
 
     const Profile = {
     picture: laurence,
@@ -17,8 +19,17 @@ export default function Listing() {
         Description: "",
         Price: "",
         Category: "",
-        Images: [],
     })
+    const [image, setImage] = useState(null);
+    
+
+    function handleImageChange(e) {
+        const file = e.target.files[0];
+
+        if(file) {
+            setImage(URL.createObjectURL(file));
+        }
+    }
 
     function handleChange(e) {
         setListing({
@@ -43,6 +54,20 @@ export default function Listing() {
                 <h1 className="text-white text-lg font-semibold mt-2">Laurence</h1>
                 <p className="text-green-300 text-sm"> Online</p>
                 </div>
+            </div>
+
+            <div className="bg-[white] h-40 w-40 flex justify-center m-4 rounded-3xl font-bold border-2 border-dashed border-gray-400">
+                <button onClick={() => fileInputRef.current?.click()}>
+                    Add Photos
+                </button>
+                <input
+                type="file"
+                accept="image/"
+                ref={fileInputRef}
+                onChange={handleImageChange}
+                hidden
+                />
+                
             </div>
 
             <h1 className="text-lg font-semibold self-start text-white">Required</h1>
@@ -93,7 +118,12 @@ export default function Listing() {
             <div className="bg-black/50 w-full h-155 flex flex-col items-center justify-center gap-2 rounded-lg p-12 ">
                 <h1 className="text-white absolute top-12 left-12">Preview</h1>
                 <div className="flex flex-col w-full h-100 bg-gray-300 rounded-lg p-4 mt-12">
-
+                    {image && (
+                        <img src={image}
+                        alt="preview"
+                          className="w-full h-full object-cover"
+                        />
+                    )}
                 </div>
 
                 <div className="flex flex-row  w-full">
