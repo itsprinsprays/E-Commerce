@@ -1,12 +1,17 @@
+import { useState } from "react";
 import laurence from "../assets/laurence.jpg"
 import imuss from "../assets/imuss.jpg"
 import { FaFacebookMessenger, FaShare } from "react-icons/fa";
 import { MdReport } from "react-icons/md";
 import { sablay, polo, book, PE } from "../assets";
 import CardProfile from "./CardProfile";
+import ReportUser from "./ReportUser";
+import React from "react";
 
 
 export default function Profile() {
+
+    const [reportModal, setReportModal] = useState(null);
 
     const product = [
         { image: sablay, title: "Pajah Sablay", price: "PHP500", name: "Prince Benitez", gmail: "princejediel.benitez@cvsu.edu.ph" },
@@ -39,7 +44,7 @@ export default function Profile() {
                     <FaFacebookMessenger /> Message</button>
                 <button className="flex justify-center items-center gap-2 border w-40 p-1 text-[green] rounded transition-color duration-300 hover:bg-[green] hover:text-white">
                     <FaShare /> Profile</button>
-                <button className="flex items-center justify-center gap-2 w-40 p-1 border rounded text-[green] transition-color duration-300 hover:bg-[green] hover:text-white">
+                <button className="flex items-center justify-center gap-2 w-40 p-1 border rounded text-[green] transition-color duration-300 hover:bg-[green] hover:text-white" onClick={()=> setReportModal(true)}>
                     <MdReport /> Report User</button>
             </div>
 
@@ -53,6 +58,9 @@ export default function Profile() {
                 </div>
 
         </div>
+
+        {reportModal && <ReportUser /> }
+
         </>
 
  
