@@ -19,6 +19,10 @@ export default function Profile() {
           { image: book, title: "NSTP Shirt", price: "PHP250.00", name: "Wendel Tuazon", gmail: "wendel.tuazon@cvsu.edu.ph" },
           { image: PE, title: "PE Uniform Set", price: "PHP500.99", name: "Robert Arpia", gmail: "robert.arpia@cvsu.edu.ph" }
     ]
+
+    function closeReport() {
+        setReportModal(false);
+    }
     
     return (    
         <>
@@ -59,7 +63,7 @@ export default function Profile() {
 
         </div>
 
-        {reportModal && <ReportUser /> }
+        {reportModal && <ReportUser onClose={closeReport}/> }
 
         </>
 
