@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 
-export default function ReportMisconduct() {
+export default function ReportMisconduct({onClose}) {
     const[Misconduct, setMisconduct] = useState({
         email: "",
         description: ""
@@ -17,7 +18,10 @@ export default function ReportMisconduct() {
         <>
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white h-70 w-100 p-4 rounded-4xl flex flex-col gap-4">
-                <h1 className="font-bold text-xl">Report a Misconduct</h1>
+                <div className="flex flex-row justify-between">
+                    <h1 className="font-bold text-xl">Report a Misconduct</h1>
+                    <IoMdClose className="text-2xl cursor-pointer" onClick={onClose}/>
+                </div>
                 <div className="px-8 flex flex-col gap-5 ">
 
                     <div>
@@ -44,7 +48,7 @@ export default function ReportMisconduct() {
                         />
                     </div>
                     <div className="flex justify-center w-full">
-                    <button type="submit" className="border w-30 rounded-full">Submit</button>
+                    <button type="submit" className="border w-30 p-2 rounded-full transitions-color duration-300 hover:bg-gray-300">Submit</button>
                     </div>
                 </div>
             </div>
