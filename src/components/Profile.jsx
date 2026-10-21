@@ -40,7 +40,6 @@ export default function Profile() {
             <div className="flex flex-col justify-center items-center">
                 <h1 className="text-2xl font-bold">Laurence Caparros</h1>
                 <h1 className="text-2xl ">Imus Campus</h1>
-                <h1>4.9 (102 Reviews)</h1>
             </div>
 
             <div className="flex flex-row justify-center items-center gap-1 sm:gap-4 my-2">
