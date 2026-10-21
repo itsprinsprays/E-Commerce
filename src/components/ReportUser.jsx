@@ -1,10 +1,19 @@
 import { FaBug } from "react-icons/fa";
 import { MdStickyNote2, MdNotificationsActive } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
+import { useState } from "react";
+import ReportMisconduct from "./ReportMisconduct";
 export default function ReportUser( {onClose} ) {
+    
+    const [ReportMisconductModal, setReportMisconductModal] = useState(false);
+
+    function ReportMisconductFunction() {
+        setReportMisconductModal(true);
+    }
 
     return(
         <>
+        {!ReportMisconductModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white h-100 w-100 p-4 shadow-xl rounded-3xl ">
                 <div className="flex items-center justify-between">
@@ -31,7 +40,7 @@ export default function ReportUser( {onClose} ) {
 
                     <div className="flex flex-row border-3 p-4 gap-2 items-center align-center transitions-color duration-300 hover:bg-gray-200">
                         <MdNotificationsActive className="text-4xl"/>
-                        <div>
+                        <div onClick={ReportMisconductFunction}>
                             <h1 className="font-bold">Report Misconduct</h1>
                             <p className="text-gray-400 text-xs">Report fraudulent, corrupt behavior of the user</p>
                         </div>
@@ -39,7 +48,13 @@ export default function ReportUser( {onClose} ) {
 
                 </div>
             </div>
+
         </div>
+        )}
+
+        {ReportMisconductModal && (
+    <ReportMisconduct onClose={() => setReportMisconductModal(false)} />
+)}
         </>
     )
 }
