@@ -22,7 +22,7 @@ export default function Suggestion() {
 
                 <div className="my-4 mx-8 flex flex-col gap-4">
                     <div className="flex flex-col ">
-                    <p className="font-bold"><span className="text-[red]">*</span>Email Address</p>
+                    <p className="font-bold"><span className="text-[red] mx-1">*</span>Email Address</p>
                     <input
                     type="text"
                     placeholder="Enter your primary email"
@@ -34,8 +34,15 @@ export default function Suggestion() {
                     </div>
                 
 
-                <div>
-                    <p>Detailed Desription</p>
+                <div className="flex flex-col">
+                    <p className="font-bold"><span className="text-[red] mx-1">*</span>Detailed Desription</p>
+                    <textarea
+                    placeholder="Input your suggestion here"
+                    value={Suggestion.description}
+                    name="description"
+                    onChange={handleChanges}
+                    className="border p-2 h-40 w-full resize-none"
+                    />
 
                 </div>
                 </div>
