@@ -3,7 +3,7 @@ import { FaRegUserCircle  } from "react-icons/fa";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
-export default function ForgotPassword() {
+export default function ForgotPassword({onClose}) {
 
     const [forgotPassword, setForgotPassword] = useState({
         email: "",
@@ -20,7 +20,8 @@ export default function ForgotPassword() {
 
     return(
         <>
-        <div className="z-10 h-80 w-90 bg-[#003300] rounded-4xl p-4 flex flex-col items-center">
+        <div className="z-10 h-80 w-90 bg-[#003300] rounded-4xl p-4 flex flex-col items-center relative">
+            <IoMdClose className="self-start text-white text-xl absolute cursor-pointer" onClick={onClose}/>
             <img className="object-contain h-20 bg" alt="Logo" src={Logo}></img>
             <h1 className="text-white font-bold text-2xl ">Forgot Password</h1>
 
@@ -43,7 +44,7 @@ export default function ForgotPassword() {
                 type="text"
                 placeholder="Confirm Email"
                 value={forgotPassword.confirmEmail}
-                name="email"
+                name="emaiconfirmEmaill"
                 onChange={handleChanges}
                 className="border-l-2 px-2 outline-none"
                 />

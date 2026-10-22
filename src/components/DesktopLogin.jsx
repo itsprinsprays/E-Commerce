@@ -97,7 +97,7 @@ export default function Login() {
                 </div>
                    )}
 
-               {forgotPasswordModal && <ForgotPassword /> }
+               {forgotPasswordModal && <ForgotPassword onClose={() => setForgotPasswordModal(false)}/> }
 
 
                 {showNotification && <Notification />}
