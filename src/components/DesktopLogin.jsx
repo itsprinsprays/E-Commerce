@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import Logo from "../assets/Logo.png";
 import Notification from "./Notification.jsx";
 import laya from "../assets/laya.png";
+import ForgotPassword from "./ForgotPassword.jsx";
 
 
 export default function Login() {
@@ -14,6 +15,11 @@ export default function Login() {
         username: "",
         password: ""
     });
+    const [forgotPasswordModal, setForgotPasswordModal] = useState(false);
+
+    function forgotPasswordFunction() {
+        setForgotPasswordModal(true);
+    }
 
     function handleChanges(e) {
         setAccount({
@@ -46,6 +52,7 @@ export default function Login() {
     className="flex justify-center items-center min-h-screen bg-cover bg-center"
     style={{ backgroundImage: `url(${laya})` }}>
        
+                   {!forgotPasswordModal && ( 
 
                 <div className="bg-white z-10 h-[500px] flex flex-row border-none rounded-2xl shadow-2xl p-2">
 
@@ -73,7 +80,7 @@ export default function Login() {
                             required
                             className="border rounded border-gray-300 p-4 h-10 text-sm w-[65%]"
                         />
-                        <p className="text-sm text-[green]">Forgot Password?</p>
+                        <p className="text-sm text-[green] cursor-pointer" onClick={forgotPasswordFunction}>Forgot Password?</p>
 
                         <button type="submit" className="border w-[65%] rounded bg-[green] h-10 text-sm text-[white] transition-colors duration-300 hover:bg-[#02E49B] hover:text-black">
                             Log In</button>
@@ -88,6 +95,11 @@ export default function Login() {
                         <h1 className="text-white lg:text-3xl lg:mt-5 font-semibold absolute bottom-[80px] transition-all duration-300 ease-in-out ">Campus Marketplace</h1>
                     </div>
                 </div>
+                   )}
+
+               {forgotPasswordModal && <ForgotPassword /> }
+
+
                 {showNotification && <Notification />}
             </div>
         </>
