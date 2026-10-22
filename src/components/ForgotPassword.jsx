@@ -50,7 +50,7 @@ export default function ForgotPassword({onClose}) {
                 />
             </div>
 
-            <button type="submit" className="border text-black transitions-color duration-300 hover:bg-[green] bg-white">Next</button>
+            <button type="submit" className="border text-black transitions-color duration-300 hover:bg-[green] bg-white p-1 rounded-full">Next</button>
         </div>
         </div>
         </>
