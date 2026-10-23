@@ -126,16 +126,16 @@ export default function Listing() {
                     )}
                 </div>
 
-                <div className="flex flex-row  w-full">
-                <div className="flex flex-col w-full text-white text-lg">
-                    <p>Title : {listing.Title} </p>
-                    <p>Description : {listing.Description}</p>
-                    <p>Price : {listing.Price}</p>
-                    <p>Category : {listing.Category}</p>
-                </div>
-                <div>
-                <ProductProfile Profile={Profile} />
-                </div>
+                <div className="flex flex-row w-full">
+                    <div className="flex flex-col w-full text-white text-lg">
+                        <p>Title : {listing.Title} </p>
+                        <p>Description : {listing.Description}</p>
+                        <p>Price : {listing.Price}</p>
+                        <p>Category : {listing.Category}</p>
+                    </div>
+                    <div>
+                    <ProductProfile Profile={Profile} />
+                    </div>
                 </div>
 
             </div>

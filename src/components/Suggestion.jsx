@@ -21,7 +21,7 @@ export default function Suggestion({onClose}) {
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
             <div className="bg-white w-100 h-100 rounded-3xl p-4 shadow-xl">
                 <div className="flex flex-row items-center justify-between">
-                <h1 className="font-bold">Provide Suggestions</h1>
+                <h1 className="font-bold text-xl">Provide Suggestions</h1>
                 <IoMdClose className="text-2xl cursor-pointer" onClick={onClose}/>
                 </div>
 

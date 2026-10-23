@@ -19,7 +19,7 @@ export default function ReportUser( {onClose} ) {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white h-100 w-100 p-4 shadow-xl rounded-3xl ">
                 <div className="flex items-center justify-between">
-                <h1 className="font-bold">FEEDBACK FORM</h1>
+                <h1 className="font-bold text-xl">FEEDBACK FORM</h1>
                 <IoMdClose className="text-2xl cursor-pointer" onClick={onClose}/>
                 </div>
                 <p className="text-gray-400 text-xs">I would like to</p>

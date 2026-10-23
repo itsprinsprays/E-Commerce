@@ -1,6 +1,9 @@
 import { useRef, useState } from "react"
+import { IoMdAdd, IoMdClose } from "react-icons/io";
 
-export default function ReportBug() {
+
+
+export default function ReportBug({onClose}) {
 
     const [reportBug, setReportBug] = useState({
         email: "",
@@ -30,9 +33,11 @@ export default function ReportBug() {
         <>
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center">
             <div className="w-100 h-100 bg-white rounded-3xl shadow-xl p-4 flex flex-col">
-                <h1 className="font-bold">Report a Bug</h1>
-
-                <div className="mx-8 my-4 flex flex-col gap-4">
+                <div className="flex flex-row items-center justify-between">
+                    <h1 className="font-bold text-xl">Report a Bug</h1>
+                    <IoMdClose className="text-2xl cursor-pointer" onClick={onClose}/>
+                </div>
+                <div className="mx-8 my-4 flex flex-col gap-3">
                     <div className="flex flex-col">
                         <p className="font-bold"><span className="mx-1 text-[red]">*</span>Email </p>
                         <input
@@ -62,7 +67,7 @@ export default function ReportBug() {
                         <p className="text-gray-500 text-xs">Upload image (Size &lt; 1MB) or capture screen to help resolve issues effectively </p>
                         
                         <div className="bg-gray-200 flex items-center justify-center h-15 border-2 border-dashed border-gray-400 rounded-2xl m-2">
-                              {image && (
+                            {image && (
                                 <img src={image}
                                 alt="preview"
                                 className="w-full h-full object-cover"
@@ -71,18 +76,25 @@ export default function ReportBug() {
 
                             {!image && ( 
                                 <>
-                            <button onClick={() => fileInputRef.current?.click()}>
-                                Attachment
-                            </button>
-                            <input
-                            type="file"
-                            accept="image/*"
-                            ref={fileInputRef}
-                            onChange={handleimageChange}
-                            hidden
-                            />
-                            </>
-                        )}</div>
+                                <div className="flex flex-col justify-center items-center">
+                                <IoMdAdd className="text-3xl text-gray-600"/>
+                                <button onClick={() => fileInputRef.current?.click()} className="text-gray-600 text-xs">
+                                    Attachment
+                                </button>
+                                </div>
+                                <input
+                                type="file"
+                                accept="image/*"
+                                ref={fileInputRef}
+                                onChange={handleimageChange}
+                                hidden
+                                />
+                                </>
+                            )}
+                        </div>
+
+                        <button type="submit" className="border w-full rounded-full p-1 transitions-color duration-300 hover:bg-gray-200">Submit</button>
+
                     </div>
 
                 </div>
