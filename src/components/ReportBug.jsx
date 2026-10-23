@@ -20,17 +20,33 @@ export default function ReportBug() {
             <div className="w-100 h-100 bg-white rounded-3xl shadow-xl p-4 flex flex-col">
                 <h1 className="font-bold">Report a Bug</h1>
 
-                <div className="mx-8 my-4 flex flex-col">
-                    <p className="font-bold"><span className="mx-1 text-[red]">*</span>Email </p>
-                    <input
-                    type="text"
-                    placeholder="Input primary email communication"
-                    value={reportBug.email}
-                    name="email"
-                    onChange={handleChanges}
-                    className="border p-2"
-                    />
+                <div className="mx-8 my-4 flex flex-col gap-4">
+                    <div className="flex flex-col">
+                        <p className="font-bold"><span className="mx-1 text-[red]">*</span>Email </p>
+                        <input
+                        type="text"
+                        placeholder="Input primary email communication"
+                        value={reportBug.email}
+                        name="email"
+                        onChange={handleChanges}
+                        className="border p-2"
+                        />
+                    </div>
+
+                    <div className="flex flex-col">
+                        <p className="font-bold"><span className="text-[red] mx-1">*</span>Detailed Description</p>
+                        <input
+                        type="text"
+                        placeholder="Input detailed description"
+                        value={reportBug.description}
+                        name="description"
+                        onChange={handleChanges}
+                        className="border p-2"
+                        />
+                    </div>
+
                 </div>
+
             </div>
         </div>
         </>
