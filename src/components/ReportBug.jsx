@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 export default function ReportBug() {
 
@@ -6,6 +6,18 @@ export default function ReportBug() {
         email: "",
         description: ""
     });
+
+    const fileInputRef = useRef(null);
+
+    const [image, setImage] = useState(null);
+
+    function handleimageChange(e) {
+        const file = e.target.files[0];
+
+        if(file) {
+            setImage(URL.createObjectURL(file));
+        }
+    }
 
     function handleChanges(e) {
         setReportBug({
@@ -43,6 +55,34 @@ export default function ReportBug() {
                         onChange={handleChanges}
                         className="border p-2"
                         />
+                    </div>
+
+                    <div>
+                        <p className="font-bold"><span className="text-[red] mx-1">*</span>Attachment</p>
+                        <p className="text-gray-500 text-xs">Upload image (Size &lt; 1MB) or capture screen to help resolve issues effectively </p>
+                        
+                        <div className="bg-gray-200 flex items-center justify-center h-15 border-2 border-dashed border-gray-400 rounded-2xl m-2">
+                              {image && (
+                                <img src={image}
+                                alt="preview"
+                                className="w-full h-full object-cover"
+                                />
+                            )}
+
+                            {!image && ( 
+                                <>
+                            <button onClick={() => fileInputRef.current?.click()}>
+                                Attachment
+                            </button>
+                            <input
+                            type="file"
+                            accept="image/*"
+                            ref={fileInputRef}
+                            onChange={handleimageChange}
+                            hidden
+                            />
+                            </>
+                        )}</div>
                     </div>
 
                 </div>
