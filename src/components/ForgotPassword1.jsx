@@ -1,17 +1,24 @@
 import { useState } from "react";
 import ForgotPassword2 from "./ForgotPassword2";
+import { IoMdClose } from "react-icons/io";
 
-export default function ForgotPassword1() {
+
+export default function ForgotPassword1({onClose}) {
     const [ForgotPasswordModal, setForgotPasswordModal] = useState(null);
 
     function forgotPasswordModalFunction() {
         setForgotPasswordModal(true);
+        
+        if(ForgotPasswordModal === false) {
+
+        }
     }
 
     return(
         <>
         {!ForgotPasswordModal && (
-        <div className="z-10 bg-[#003300] h-120 w-100 rounded-4xl flex flex-col items-center p-4 gap-4">
+        <div className="z-10 bg-[#003300] h-120 w-100 rounded-4xl flex flex-col items-center p-4 gap-4 relative">
+            <IoMdClose className="text-white text-4xl absolute left-2 cursor-pointer" onClick={onClose}/>
             <h1 className="text-white text-2xl my-12 font-bold">Forgot Password</h1>
 
             <div className="flex flex-row gap-8"> 
