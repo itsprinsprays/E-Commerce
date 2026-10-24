@@ -2,7 +2,7 @@ import Logo from "../assets/Logo.png";
 import { FaRegUserCircle  } from "react-icons/fa";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import ForgotPassword2 from "./ForgotPassword2";
+
 
 export default function ForgotPassword2({onClose}) {
     
@@ -10,12 +10,6 @@ export default function ForgotPassword2({onClose}) {
         password: "",
         confirmPassword: ""
     });
-
-    const [OTPPin, setOTPPin] = useState(null);
-
-    function OTPPinFunction() {
-        setOTPPin(true);
-    }
 
     function handleChanges(e) {
         setForgotPassword({
@@ -27,7 +21,6 @@ export default function ForgotPassword2({onClose}) {
 
     return(
         <>
-        {!OTPPin && (
         <div className="z-10 h-80 w-90 bg-[#003300] rounded-4xl p-4 flex flex-col items-center relative">
             <IoMdClose className="self-start text-white text-xl absolute cursor-pointer" onClick={onClose}/>
             <img className="object-contain h-20 bg" alt="Logo" src={Logo}></img>
@@ -58,12 +51,11 @@ export default function ForgotPassword2({onClose}) {
                 />
             </div>
 
-            <button type="submit" className="border text-black transitions-color duration-300 hover:bg-[green] bg-white p-1 rounded-full" onClick={OTPPinFunction}>
+            <button type="submit" className="border text-black transitions-color duration-300 hover:bg-[green] bg-white p-1 rounded-full">
                 Next</button>
         </div>
         </div>
-        )}
-        {OTPPin && <ForgotPassword2 />}
+    
         </>
     )
 }

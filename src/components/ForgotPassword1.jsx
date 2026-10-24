@@ -1,23 +1,16 @@
 import { useState } from "react";
+import ForgotPassword2 from "./ForgotPassword2";
 
 export default function ForgotPassword1() {
+    const [ForgotPasswordModal, setForgotPasswordModal] = useState(null);
 
-        const [OTP, setOTP] = useState({
-            otp1: "",
-            otp2: "",
-            otp3: "",
-            otp4: ""
-        });
-
-    const [OTPPin, setOTPPin] = useState(null);
-
-    function OTPPinFunction() {
-        setOTPPin(true);
+    function forgotPasswordModalFunction() {
+        setForgotPasswordModal(true);
     }
-    
 
     return(
         <>
+        {!ForgotPasswordModal && (
         <div className="z-10 bg-[#003300] h-120 w-100 rounded-4xl flex flex-col items-center p-4 gap-4">
             <h1 className="text-white text-2xl my-12 font-bold">Forgot Password</h1>
 
@@ -59,7 +52,7 @@ export default function ForgotPassword1() {
                 </div>
             </div>
              <div className="flex">
-                    <button type="submit" className="bg-[white] rounded-full font-bold w-15 mt-3 p-1 transitions-color duration-300 hover:bg-[green]" onClick={OTPPinFunction}>Next</button>
+                    <button type="submit" className="bg-[white] rounded-full font-bold w-15 mt-3 p-1 transitions-color duration-300 hover:bg-[green]" onClick={forgotPasswordModalFunction}>Next</button>
             </div>
 
             <div className="text-white text-xs font-bold">
@@ -75,6 +68,9 @@ export default function ForgotPassword1() {
             </div>
             <p className="text-white text-xs cursor-pointer">Didn't receive the code? <span className="text-[orange]">Resend OTP</span></p>
         </div>
+        )}
+
+        {ForgotPasswordModal && <ForgotPassword2 onClose={() => setForgotPasswordModal(false)}/>}
         </>
     ) 
 }
