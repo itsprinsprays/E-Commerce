@@ -10,7 +10,7 @@ export default function ForgotPassword1({onClose}) {
         setForgotPasswordModal(true);
         
         if(ForgotPasswordModal === false) {
-
+            onClose();
         }
     }
 
@@ -77,7 +77,7 @@ export default function ForgotPassword1({onClose}) {
         </div>
         )}
 
-        {ForgotPasswordModal && <ForgotPassword2 onClose={() => setForgotPasswordModal(false)}/>}
+        {ForgotPasswordModal && <ForgotPassword2 onClose={() => setForgotPasswordModal(onClose)}/>}
         </>
     ) 
 }

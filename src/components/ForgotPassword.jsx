@@ -63,7 +63,7 @@ export default function ForgotPassword({onClose}) {
         </div>
         </div>
         )}
-        {OTPPin && <ForgotPassword1 onClose={() => setOTPPin(false)} />}
+        {OTPPin && <ForgotPassword1 onClose={() => setOTPPin(onClose)} />}
         </>
     )
 }

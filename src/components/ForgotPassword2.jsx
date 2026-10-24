@@ -34,7 +34,7 @@ export default function ForgotPassword2({onClose}) {
         return;
     }
 
-    navigate("/")
+    onClose();
 }
 
 
@@ -73,7 +73,6 @@ export default function ForgotPassword2({onClose}) {
                 />
             </div>
 
-            {/* FIX 5: <Link> is no longer imported (ReferenceError), and a Link can't submit the form anyway. Replaced with a submit button so handleSubmit runs. */}
             <button type="submit" className="border text-black transitions-color duration-300 hover:bg-[green] bg-white p-1 rounded-full">
                 Next</button>
           </form>
