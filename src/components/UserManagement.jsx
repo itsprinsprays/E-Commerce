@@ -1,11 +1,12 @@
 import { useState } from "react"
-import { FaSchoolFlag } from "react-icons/fa6";
+import { FaSchoolFlag, FaUserGroup  } from "react-icons/fa6";
 export default function UserManagement() {
     const [selected, setSelected] = useState("");
 
 
     return(
         <>
+        <div className="bg-gray-400 h-full">
         <div className="bg-[darkgreen] h-30 flex items-center justify-center">
             <div className="flex flex-row items-center bg-white p-4 rounded-2xl gap-1">
                 <FaSchoolFlag className="text-2xl"/>
@@ -29,6 +30,23 @@ export default function UserManagement() {
                     <option value="Trece Martires City Campus">Trece Martires City Campus </option>
                 </select>
             </div>
+        </div>
+
+        <div className="px-8 py-12">
+            <div className="flex justify-between items-center">
+                <div className="flex flex-row items-center gap-2">
+                    <FaUserGroup className="text-6xl"/>
+                    <h1 className="text-4xl">User Management</h1>
+                </div>
+                <div className="bg-white rounded-2xl p-4">
+                    <input
+                    type="text"
+                    placeholder="Search"
+                    className="outline-none placeholder:text-black"
+                    />
+                </div>
+            </div>
+        </div>
         </div>
         </>
     )
