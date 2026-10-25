@@ -2,7 +2,7 @@ import { useState } from "react"
 import { FaSchoolFlag, FaUserGroup  } from "react-icons/fa6";
 export default function UserManagement() {
     const [selected, setSelected] = useState("");
-    const employee = [
+    const student = [
   { id: 1, name: "Robert Jan", username: "Bobeys", email: "robert.arpia@cvsu.edu.ph", studentId: "202411229", campus: "Imus" },
   { id: 2, name: "Ryhlle Batak", username: "Ryyy", email: "ryhlle.batak@cvsu.edu.ph", studentId: "202412341", campus: "Indang" },
   { id: 3, name: "Chan Chan", username: "Chans", email: "chan.angel@cvsu.edu.ph", studentId: "20234532", campus: "Bacoor" },
@@ -72,14 +72,14 @@ export default function UserManagement() {
                 </thead>
 
                 <tbody className="text-center">
-                    {employee.map((employee) => (
-                        <tr key={employee.id}>
-                            <td className="p-4 border-b-2 border-gray-300">{employee.id}</td>
-                            <td className="p-4 border-b-2 border-gray-300">{employee.name}</td>
-                            <td className="p-4 border-b-2 border-gray-300">{employee.username}</td>
-                            <td className="p-4 border-b-2 border-gray-300">{employee.email}</td>
-                            <td className="p-4 border-b-2 border-gray-300">{employee.studentId}</td>
-                            <td className="p-4 border-b-2 border-gray-300">{employee.campus}</td>
+                    {student.map((student) => (
+                        <tr key={student.id}>
+                            <td className="p-4 border-b-2 border-gray-300">{student.id}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{student.name}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{student.username}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{student.email}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{student.studentId}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{student.campus}</td>
                         </tr>
                     ))}
                 </tbody>
