@@ -2,11 +2,21 @@ import { useState } from "react"
 import { FaSchoolFlag, FaUserGroup  } from "react-icons/fa6";
 export default function UserManagement() {
     const [selected, setSelected] = useState("");
+    const employee = [
+  { id: 1, name: "Robert Jan", username: "Bobeys", email: "robert.arpia@cvsu.edu.ph", studentId: "202411229", campus: "Imus" },
+  { id: 2, name: "Ryhlle Batak", username: "Ryyy", email: "ryhlle.batak@cvsu.edu.ph", studentId: "202412341", campus: "Indang" },
+  { id: 3, name: "Chan Chan", username: "Chans", email: "chan.angel@cvsu.edu.ph", studentId: "20234532", campus: "Bacoor" },
+  { id: 4, name: "Jeds Benits", username: "Snirp", email: "prins.prays@cvsu.edu.ph", studentId: "20244332", campus: "Silang" },
+  { id: 5, name: "Matchuu", username: "IEEE", email: "james.reid@cvsu.edu.ph", studentId: "20263214", campus: "Rosario" },
+  { id: 6, name: "Kiels Ka-Gwapo", username: "Pogi", email: "kiels.gwapo@cvsu.edu.ph", studentId: "20273412", campus: "Silang" },
+  { id: 7, name: "Lorens MLBB", username: "300star", email: "lorens.mlbb@cvsu.edu.ph", studentId: "19902341", campus: "Imus" },
+  { id: 8, name: "Windil Lu", username: "ruby only", email: "dellulu@cvsu.edu.ph", studentId: "167490321", campus: "Sulasok" }
+];
 
 
     return(
         <>
-        <div className="bg-gray-400 h-full">
+        <div className="bg-gray-400 min-h-screen pb-2">
         <div className="bg-[darkgreen] h-30 flex items-center justify-center">
             <div className="flex flex-row items-center bg-white p-4 rounded-2xl gap-1">
                 <FaSchoolFlag className="text-2xl"/>
@@ -46,6 +56,34 @@ export default function UserManagement() {
                     />
                 </div>
             </div>
+        </div>
+
+        <div className="bg-white p-4 mx-10 rounded-2xl">
+            <table className="table-fixed border-spacing-y-1 border-gray-400 w-full ">
+                <thead>
+                    <tr className="bg-gray-300">
+                        <th className="p-4 font-semibold text-gray-600 text-sm rounded-l-2xl ">ID</th>
+                        <th className="p-4 font-semibold text-gray-600 text-sm">Name</th>
+                        <th className="p-4 font-semibold text-gray-600 text-sm">Username</th>
+                        <th className="p-4 font-semibold text-gray-600 text-sm">Cvsu Email</th>
+                        <th className="p-4 font-semibold text-gray-600 text-sm">Student No.</th>
+                        <th className="p-4 font-semibold text-gray-600 text-sm rounded-r-2xl">Campus</th>
+                    </tr>
+                </thead>
+
+                <tbody className="text-center">
+                    {employee.map((employee) => (
+                        <tr key={employee.id}>
+                            <td className="p-4 border-b-2 border-gray-300">{employee.id}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{employee.name}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{employee.username}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{employee.email}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{employee.studentId}</td>
+                            <td className="p-4 border-b-2 border-gray-300">{employee.campus}</td>
+                        </tr>
+                    ))}
+                </tbody>
+             </table>
         </div>
         </div>
         </>
