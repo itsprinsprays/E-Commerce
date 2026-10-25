@@ -70,7 +70,7 @@ export default function Navigation() {
           <span className="hidden sm:inline">Reports</span>
         </Link> 
         
-        <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/notes">
+        <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/approval">
           <CiStickyNote className="text-xl shrink-0" />
           <span className="hidden sm:inline">Listing</span>
         </Link>
