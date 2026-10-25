@@ -11,6 +11,7 @@ import MobileLogin from "./components/MobileLogin"
 import Profile from "./components/Profile"
 import AccountInformation from "./components/AccountInformation"
 import Listing from "./components/Listing"
+import UserManagement from "./components/UserManagement";
 
 function App() {
  return (
@@ -22,6 +23,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/users" element={<UserManagement />} />
       </Route>
     </Routes>
   )
