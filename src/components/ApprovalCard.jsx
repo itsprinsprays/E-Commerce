@@ -3,13 +3,7 @@ import { FaCheck } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import { GrView } from "react-icons/gr";
 import ListingModals from "./ListingModals";
-export default function ApprovalCard({images, title, price, name, picture, details}) {
-
-    const [next, setNext] = useState(null);
-
-    function nextModal() {
-        setNext(true);
-    }
+export default function ApprovalCard({images, title, price, name, picture, details, onClick}) {
 
     return(
         <>
@@ -19,7 +13,7 @@ export default function ApprovalCard({images, title, price, name, picture, detai
                 <div className="flex flex-row gap-6">
 
                 <img className="w-24 h-24"
-                src={images}></img>
+                src={images[0]}></img>
 
                 <div className="flex flex-col w-40">
                 <p>{name}</p>
@@ -38,9 +32,10 @@ export default function ApprovalCard({images, title, price, name, picture, detai
 
                 <div className="flex flex-col gap-2">
 
-                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#2196f3] cursor-pointer gap-2">
+                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#2196f3] cursor-pointer gap-2"
+                    onClick={onClick}>
                         <GrView className="text-3xl"/>
-                        <p className="hidden sm:inline" onClick={nextModal}>
+                        <p className="hidden sm:inline">
                             View</p>
                     </div>
 
@@ -59,7 +54,6 @@ export default function ApprovalCard({images, title, price, name, picture, detai
             </div>
         </div>
 
-        {next && <ListingModals /> }
         </>
     )
 }

@@ -2,15 +2,27 @@ import { useState } from "react"
 import { FaSchoolFlag  } from "react-icons/fa6";
 import ApprovalCard from "./ApprovalCard";
 import { polo, laurence, book, PE } from "../assets";
+import ListingModals from "./ListingModals";
+
+        const  student = [
+        { images: [polo, book], title: "Polo Shirt", price: "PHP300.99", name: "Renz Borromeo", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} },
+        { images: [book], title: "Polo Shirt", price: "PHP250.00", name: "Robert Arpia", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} },
+        { images: [PE], title: "Polo Shirt", price: "PHP400.00", name: "Laurence Caparros", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} }
+    ];
 
 export default function ApprovalListing() {
 
     const [selected, setSelected] = useState("");
-        const  student = [
-        { images: [polo], title: "Polo Shirt", price: "PHP300.99", name: "Renz Borromeo", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} },
-        { images: [book], title: "Polo Shirt", price: "PHP250.00", name: "Robert Arpia", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} },
-        { images: [PE], title: "Polo Shirt", price: "PHP400.00", name: "Laurence Caparros", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} }
-    ];
+
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    function show(item) {
+        setSelectedProduct(item);
+    }
+
+    function closeProduct() {
+        setSelectedProduct(null);
+    }
 
     return(
         <>
@@ -46,10 +58,13 @@ export default function ApprovalListing() {
             <h1 className="text-3xl">Approval Listing</h1>
             <div>
                 {student.map((item, index)=> (
-                    <ApprovalCard key={index} {...item}/>
+                    <ApprovalCard key={index} {...item} onClick={() => show(item)}/>
                 ))}
             </div>
+
+                {selectedProduct && <ListingModals product={selectedProduct} onClose={closeProduct} /> }
         </div>
+
         </>
     )
 }
