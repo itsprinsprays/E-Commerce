@@ -1,8 +1,8 @@
 import { useRef ,useState } from "react";
-import laya from "../assets/laya.png";
-import laurence from "../assets/laurence.jpg";
+import laya from "../../assets/laya.png";
+import laurence from "../../assets/laurence.jpg";
 import { FaBackwardStep } from "react-icons/fa6";
-import ProductProfile from "./ProductProfile";
+import ProductProfile from "../ProductProfile";
 
 export default function Listing() {
 

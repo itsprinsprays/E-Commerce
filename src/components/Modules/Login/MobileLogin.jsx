@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import logo from "../assets/Logo.png";
-import laya from "../assets/laya.png";
+import logo from "../../../assets/Logo.png";
+import laya from "../../../assets/laya.png";
+import Notification from "../../Notification/Notification.jsx"
 
 export default function MobileLogin() {
+
+  const [showNotification, setShowNotification] = useState(false);
   const navigate = useNavigate();
   const [account, setAccount] = useState({
     username: "",
@@ -18,14 +21,24 @@ export default function MobileLogin() {
       [e.target.name]: e.target.value
     });
   }
+  
+function handleSubmit(e) {
+        e.preventDefault();
 
-  function handleSubmit(e) {
-    e.preventDefault();
+        if (account.username === "kabsu" && account.password === "kabsu") {
+            navigate("/dashboard");
+        } else {
+            setShowNotification(true);
+            setTimeout(() => {
+                setShowNotification(false);
+            }, 3000)
+        }
 
-    if (account.username === "kabsu" && account.password === "kabsu") {
-      navigate("/dashboard");
+        setAccount({
+            username: "",
+            password: ""
+        })
     }
-  }
 
   return (
     <>
@@ -77,7 +90,9 @@ export default function MobileLogin() {
 
              <Link to="/signup" className=" text-gray-500">Don't have an account yet? <span className="text-[green]">Sign Up</span></Link>
         </form>
+        {showNotification && <Notification />}
       </div>
+      
     </>
   );
 }

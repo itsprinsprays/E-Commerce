@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { FaSchoolFlag  } from "react-icons/fa6";
-import ApprovalCard from "./ApprovalCard";
-import { polo, laurence, book, PE } from "../assets";
-import ListingModals from "./ListingModals";
+import ApprovalCard from "../ApprovalCard";
+import { polo, laurence, book, PE } from "../../assets";
+import ListingModals from "../ListingModals";
 
         const  student = [
         { images: [polo, book], title: "Polo Shirt", price: "PHP300.99", name: "Renz Borromeo", picture: laurence, details: {1: "Large", 2: "Brand New", 3: "Pwede sa Maarte"} },

@@ -2,17 +2,17 @@ import { Routes, Route } from "react-router-dom"
 
 import './App.css'
 import Login from "./components/Login"
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Modules/Dashboard'
 import Navigation from "./components/Navigation"
 import SignUp from "./components/SignUp"
 import Layout from './components/Layout'
-import Notification from "./components/Notification"
-import MobileLogin from "./components/MobileLogin"
-import Profile from "./components/Profile"
+import Notification from "./components/Notification/Notification"
+import MobileLogin from "./components/Modules/Login/MobileLogin"
+import Profile from "./components/Modules/Profile"
 import AccountInformation from "./components/AccountInformation"
-import Listing from "./components/Listing"
-import UserManagement from "./components/UserManagement";
-import ApprovalListing from "./components/ApprovalListing"
+import Listing from "./components/Modules/Listing"
+import UserManagement from "./components/Modules/UserManagement";
+import ApprovalListing from "./components/Modules/ApprovalListing"
 
 function App() {
  return (

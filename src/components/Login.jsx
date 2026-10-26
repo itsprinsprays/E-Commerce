@@ -1,5 +1,5 @@
-import MobileLogin from "./MobileLogin.jsx";
-import DesktopLogin from "./DesktopLogin.jsx";
+import MobileLogin from "./Modules/Login/MobileLogin.jsx";
+import DesktopLogin from "./Modules/Login/DesktopLogin.jsx";
 
 export default function Login() {
     return (

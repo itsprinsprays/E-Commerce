@@ -1,8 +1,8 @@
-import Card from "./Card"
-import Product from "./Product";
+import Card from "../Card"
+import Product from "../Product";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif, laurence } from "../assets";
+import { sablay, polo, book, PE, PEPants, CrimPantsBacoor, CrimPoloBacoor, EducUnif, EducUnif1, PsycUnif, laurence } from "../../assets";
 
 const products = [
   { images: [sablay, polo, book, PE], title: "Pajah Sablay", price: "PHP500", picture: laurence, name: "Prince Benitez", gmail: "princejediel.benitez@cvsu.edu.ph", campus: "Imus", details: {1: "Medium", 2: "Twice Nagamit", 3: "Hindi Kupas"} },

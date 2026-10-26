@@ -1,11 +1,11 @@
 import { useState } from "react";
-import laurence from "../assets/laurence.jpg"
-import imuss from "../assets/imuss.jpg"
+import laurence from "../../assets/laurence.jpg"
+import imuss from "../../assets/imuss.jpg"
 import { FaFacebookMessenger, FaShare } from "react-icons/fa";
 import { MdReport } from "react-icons/md";
-import { sablay, polo, book, PE } from "../assets";
-import CardProfile from "./CardProfile";
-import ReportUser from "./ReportUser";
+import { sablay, polo, book, PE } from "../../assets";
+import CardProfile from "../CardProfile";
+import ReportUser from "../ReportUser";
 import React from "react";
 
 
