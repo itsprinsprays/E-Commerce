@@ -6,13 +6,13 @@ import Dashboard from './components/Modules/Dashboard'
 import Navigation from "./components/Navigation"
 import SignUp from "./components/SignUp"
 import Layout from './components/Layout'
-import Notification from "./components/Notification/Notification"
+import Notification from "./components/Notification/LoginNotification"
 import MobileLogin from "./components/Modules/Login/MobileLogin"
 import Profile from "./components/Modules/Profile"
 import AccountInformation from "./components/AccountInformation"
 import Listing from "./components/Modules/Listing"
 import UserManagement from "./components/Modules/UserManagement";
-import ApprovalListing from "./components/Modules/ApprovalListing"
+import ApprovalListing from "./components/Modules/ApprovalListing/ApprovalListing"
 
 function App() {
  return (

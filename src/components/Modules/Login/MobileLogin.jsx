@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import logo from "../../../assets/Logo.png";
 import laya from "../../../assets/laya.png";
-import Notification from "../../Notification/Notification.jsx"
+import Notification from "../../Notification/LoginNotification.jsx"
 
 export default function MobileLogin() {
 

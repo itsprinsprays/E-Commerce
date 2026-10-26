@@ -3,7 +3,14 @@ import { FaCheck } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
 import { GrView } from "react-icons/gr";
 import ListingModals from "./ListingModals";
+import AcceptNotitification from "../../Notification/AcceptNotification";
 export default function ApprovalCard({images, title, price, name, picture, details, onClick}) {
+
+    const [accept, setAccept] = useState(null);
+
+    function acceptNotitification() {
+        setAccept(true);
+    }
 
     return(
         <>
@@ -39,7 +46,8 @@ export default function ApprovalCard({images, title, price, name, picture, detai
                             View</p>
                     </div>
 
-                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#4caf50] cursor-pointer gap-2">
+                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#4caf50] cursor-pointer gap-2"
+                    onClick={acceptNotitification}>
                         <FaCheck className="text-3xl "/> 
                         <p className="hidden sm:inline">Accept</p>
                     </div>
@@ -53,6 +61,8 @@ export default function ApprovalCard({images, title, price, name, picture, detai
 
             </div>
         </div>
+
+        {accept && <AcceptNotitification onClose={() => setAccept(false)} />}
 
         </>
     )

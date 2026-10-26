@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "../../../assets/Logo.png";
-import Notification from "../../Notification/Notification.jsx"
+import Notification from "../../Notification/LoginNotification.jsx"
 import laya from "../../../assets/laya.png";
 import ForgotPassword from "../../ForgotPassword.jsx";
 
