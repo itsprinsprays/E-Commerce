@@ -1,13 +1,19 @@
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
-
+import { GrView } from "react-icons/gr";
+import ListingModals from "./ListingModals";
 export default function ApprovalCard({images, title, price, name, picture, details}) {
 
+    const [next, setNext] = useState(null);
+
+    function nextModal() {
+        setNext(true);
+    }
 
     return(
         <>
-        <div className="bg-white border rounded-2xl overflow-hidden m-2">
+        <div className="bg-white border rounded-2xl overflow-hidden m-2 transitions-color duration-300 hover:bg-gray-200">
             <div className="flex flex-row items-center p-4 gap-4 justify-between">
 
                 <div className="flex flex-row gap-6">
@@ -31,20 +37,29 @@ export default function ApprovalCard({images, title, price, name, picture, detai
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <div className="flex flex-row items-center p-2 rounded text-white bg-[green] ">
-                    <FaCheck className="text-3xl "/> 
-                    <p className="hidden sm:inline">Accept</p>
+
+                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#2196f3] cursor-pointer gap-2">
+                        <GrView className="text-3xl"/>
+                        <p className="hidden sm:inline" onClick={nextModal}>
+                            View</p>
+                    </div>
+
+                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#4caf50] cursor-pointer gap-2">
+                        <FaCheck className="text-3xl "/> 
+                        <p className="hidden sm:inline">Accept</p>
                     </div>
                     
-                    <div className="flex flex-row items-center p-2 rounded text-white bg-[red] ">
-                    <IoCloseOutline className="text-3xl"/> 
-                    <p className="hidden sm:inline">Decline</p>
+                    <div className="flex flex-row items-center p-2 rounded text-white bg-[#d32f2f] cursor-pointer gap-2">
+                        <IoCloseOutline className="text-3xl"/> 
+                        <p className="hidden sm:inline">Decline</p>
                     </div>
                     
                 </div>
 
             </div>
         </div>
+
+        {next && <ListingModals /> }
         </>
     )
 }
