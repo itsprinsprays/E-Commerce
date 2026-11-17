@@ -44,7 +44,7 @@ const student = [
                 </div>
 
                 <div className="bg-[#adeacb] p-4 border-gray-400 flex gap-4 justify-between">
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 items-center">
                             <label className="font-semibold text-xl ">Campus</label>
                             <select
                             className=" bg-white rounded-xl p-2">
@@ -73,7 +73,7 @@ const student = [
                         </div>
                 </div>
 
-                <div className="p-2">
+                <div className="p-3 mt-5">
                     <table className="w-full">
                         <thead className="bg-gray-200 rounded-xl text-left">
                             <th className="p-2">Name</th>
