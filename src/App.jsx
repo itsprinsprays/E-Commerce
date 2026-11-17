@@ -13,6 +13,7 @@ import AccountInformation from "./components/AccountInformation"
 import Listing from "./components/Modules/Listing"
 import UserManagement from "./components/Modules/UserManagement";
 import ApprovalListing from "./components/Modules/ApprovalListing/ApprovalListing"
+import ReportListing from "./components/Modules/ReportListing"
 
 function App() {
  return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/users" element={<UserManagement />} />
         <Route path="/approval" element={<ApprovalListing />} />
+        <Route path="/reports" element={<ReportListing />} />
       </Route>
     </Routes>
   )
