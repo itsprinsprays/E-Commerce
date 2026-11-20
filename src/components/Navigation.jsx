@@ -40,7 +40,7 @@ export default function Navigation() {
           <span className="hidden sm:inline">Add New Listing</span>
         </Link>
 
-        <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/Messages">
+        <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/message">
           <SiMessenger className="text-xl shrink-0" />
           <span className="hidden sm:inline">Messages</span>
         </Link>
