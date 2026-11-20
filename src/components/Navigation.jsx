@@ -45,7 +45,7 @@ export default function Navigation() {
           <span className="hidden sm:inline">Messages</span>
         </Link>
 
-        <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/Notifications">
+        <Link className="flex items-center gap-3 hover:bg-[#02E49B] p-2 rounded transition-colors duration-300" to="/notifications">
           <IoIosNotifications className="text-xl shrink-0" />
           <span className="hidden sm:inline">Notifications</span>
         </Link>
